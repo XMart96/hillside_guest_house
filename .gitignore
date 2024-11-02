@@ -1,0 +1,30 @@
+# Node.js
+client/node_modules/
+server/node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+client/.env
+server/.env
+
+# Build output
+client/build
+server/dist
+
+# Testing
+client/coverage
+server/coverage
+
+# Miscellaneous
+.DS_Store
+*.swp
+Thumbs.db
+
+# Ignore .vscode settings
+.vscode/
