@@ -1,8 +1,7 @@
 import { Provider } from "@/components/ui/provider";
-import system from "../theme";
 
 const ProviderComponent = ({ children }) => (
-    <Provider value={system}>
+    <Provider>
         {children}
     </Provider>
 );

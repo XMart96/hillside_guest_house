@@ -3,10 +3,14 @@ import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 const config = defineConfig({
     theme: {
         tokens: {
+            fonts: {
+                body: { value: 'Noto Sans, serif' },
+                logo: { value: 'Mr Dafoe, cursive' }
+            },
             colors: {
-                hillside: {
-                    blu: { value: '#0e2737' }
-                }
+                blu: { value: '#0e2737' },
+                grn: { value: '#1cc3b2' },
+                gry: { value: '#636a76' }
             }
         }
     }
