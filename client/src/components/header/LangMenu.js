@@ -16,8 +16,9 @@ const LangMenu = () => {
     return (
         <MenuRoot>
             <MenuTrigger asChild>
-                <Button variant='ghost' size="sm" color='white' _hover={{ color: 'grn'}}>
-                    <LuLanguages /> <Text hideBelow='md'>Lang</Text>
+                <Button variant='ghost' color='white' _hover={{ color: 'grn' }} _focusVisible={{ outline: 'none' }}>
+                    <LuLanguages />
+                    <Text fontSize='md' hideBelow='md'>Lang</Text>
                 </Button>
             </MenuTrigger>
             <MenuContent minW="10rem">

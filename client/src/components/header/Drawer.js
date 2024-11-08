@@ -1,43 +1,33 @@
 import {
-    DrawerActionTrigger,
     DrawerBackdrop,
     DrawerBody,
-    DrawerCloseTrigger,
     DrawerContent,
-    DrawerFooter,
     DrawerHeader,
     DrawerRoot,
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Button, Text } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { LuMenu } from "react-icons/lu";
+import Logo from './Logo';
 
-const Drawer = () => (
+const Drawer = ({ children }) => (
     <DrawerRoot placement="start">
         <DrawerBackdrop />
         <DrawerTrigger asChild>
-            <Button variant="ghost" size="sm" hideFrom='md' color='gry'>
-                <LuMenu /> <Text hideBelow='md'>Menu</Text>
+            <Button variant="ghost" hideFrom='md' color='gry' _hover={{ bg: 'blu', color: 'grn' }}>
+                <LuMenu />
             </Button>
         </DrawerTrigger>
-        <DrawerContent offset="4" rounded="md">
+        <DrawerContent offset="4" rounded="md" bg='blu'>
             <DrawerHeader>
-                <DrawerTitle>Drawer Title</DrawerTitle>
+                <DrawerTitle>
+                    <Logo />
+                </DrawerTitle>
             </DrawerHeader>
             <DrawerBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                {children}
             </DrawerBody>
-            <DrawerFooter>
-                <DrawerActionTrigger asChild>
-                    <Button variant="outline">Cancel</Button>
-                </DrawerActionTrigger>
-                <Button>Save</Button>
-            </DrawerFooter>
-            <DrawerCloseTrigger />
         </DrawerContent>
     </DrawerRoot>
 );
