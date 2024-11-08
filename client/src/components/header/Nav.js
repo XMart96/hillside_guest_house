@@ -1,18 +1,29 @@
-import { Flex } from "@chakra-ui/react";
-import LinkItem from "./LinkItem";
+import { Flex, Link as ChakraLink } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { menuData } from "../../data";
 
-const Nav = () => (
+const Nav = ({ onClose }) => (
     <Flex 
-        gap='6' 
+        gap='5' 
         align='start' 
         direction={{ base: 'column', md: 'row' }}
     >
-        <LinkItem text='Home' />
-        <LinkItem text='About us' />
-        <LinkItem text='Rooms' />
-        <LinkItem text='Services' />
-        <LinkItem text='News' />
-        <LinkItem text='Contacts' />
+        {
+            menuData.map(i => (
+                <ChakraLink 
+                    as={Link} 
+                    key={i.path} 
+                    to={i.path}
+                    color={{base: 'white', md: 'gry'}}
+                    _hover={{ color: 'grn', textDecoration: 'none'}}
+                    _focus={{ outline: 'none' }}
+                    fontSize='lg'
+                    onClick={onClose}
+                >
+                    {i.label}
+                </ChakraLink>
+            ))
+        }
     </Flex>
 );
 

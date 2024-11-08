@@ -6,12 +6,16 @@ import Nav from "./Nav";
 const LowerHeader = () => {
     const isMobile = useBreakpointValue({base: true, md: false});
     return (
-        <Flex bg='white' px='5' justify={{base: 'space-between', md: 'space-around'}} align='center'>
+        <Flex 
+            bg='white' 
+            px='5' 
+            justify={{base: 'space-between', md: 'space-around'}} 
+            align='center'
+        >
             <Flex>
                 <LogoText />
             </Flex>
-            {!isMobile && <Nav />}
-            <Drawer><Nav /></Drawer>
+            {!isMobile ? <Nav /> : <Drawer />}
         </Flex>
     );
 };

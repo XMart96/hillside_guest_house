@@ -1,0 +1,9 @@
+export const menuData = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/rooms', label: 'Rooms' },
+    { path: '/services', label: 'Servies' },
+    { path: '/news', label: 'News' },
+    { path: '/contacts', label: 'Contacts' },
+    { path: '/book', label: 'Book' }
+];

@@ -1,5 +1,5 @@
-import Header from "./components/header/Header";
+import RoutesComponent from "./components/RoutesComponent";
 
-const App = () => <Header />;
+const App = () => <RoutesComponent />;
 
 export default App;
