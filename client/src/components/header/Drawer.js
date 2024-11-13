@@ -6,9 +6,10 @@ import {
     DrawerRoot,
     DrawerTitle,
     DrawerTrigger,
-    DrawerCloseTrigger
+    DrawerCloseTrigger,
+    DrawerFooter
 } from "@/components/ui/drawer";
-import { Button } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 import { LuMenu } from "react-icons/lu";
 import Logo from './Logo';
 import Nav from "./Nav";
@@ -36,12 +37,15 @@ const Drawer = () => {
             <DrawerContent offset="4" rounded="md" bg='blu'>
                 <DrawerHeader>
                     <DrawerTitle>
-                        <Logo />
+                        <Logo onClose={() => setOpen(false)} />
                     </DrawerTitle>
                 </DrawerHeader>
                 <DrawerBody>
                     <Nav onClose={() => setOpen(false)} />
                 </DrawerBody>
+                <DrawerFooter>
+                    <Text>Hillside all rights reserved</Text>
+                </DrawerFooter>
                 <DrawerCloseTrigger />
             </DrawerContent>
         </DrawerRoot>

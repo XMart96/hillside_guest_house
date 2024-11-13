@@ -1,7 +1,8 @@
 import { Flex, IconButton } from "@chakra-ui/react";
 import { LuPhone, LuMail, LuInstagram } from "react-icons/lu";
-import LangMenu from "./LangMenu";
 import UpperHeaderItem from "./UpperHeaderItem";
+import LangMenu from "./LangMenu";
+import { phone, email, instaURL } from "../../data";
 
 const UpperHeader = () => (
     <Flex 
@@ -12,12 +13,12 @@ const UpperHeader = () => (
         align='center'
     >
         <Flex gap={{base: 8, md: 5}}>
-            <UpperHeaderItem href='#' icon={<LuPhone />} text='+37443290127' />
-            <UpperHeaderItem href='#' icon={<LuMail />} text='info@hillside.am' />
+            <UpperHeaderItem href={`tel:${phone}`} icon={<LuPhone />} text={phone} />
+            <UpperHeaderItem href={`mailto:${email}`} icon={<LuMail />} text={email} />
         </Flex>
         <Flex gap='5'>
             <UpperHeaderItem 
-                href='#' 
+                href={instaURL}
                 icon={<LuInstagram />} 
                 text='Instagram'
                 as={IconButton}

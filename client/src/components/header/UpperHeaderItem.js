@@ -1,15 +1,17 @@
-import { Link, Text } from "@chakra-ui/react";
+import { Link as ChakraLink, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const UpperHeaderItem = ({ href, icon, text }) => (
-    <Link 
-        href={href} 
+    <ChakraLink
+        as={Link} 
+        to={href} 
         color='white' 
         _hover={{ color: 'grn', textDecoration: 'none'}} 
         _focus={{outline: 'none'}}
     >
         {icon} 
         <Text hideBelow='md'>{text}</Text>
-    </Link>
+    </ChakraLink>
 );
 
 export default UpperHeaderItem;

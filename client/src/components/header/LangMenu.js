@@ -7,11 +7,12 @@ import {
 } from "@/components/ui/menu";
 import { Button } from "@/components/ui/button";
 import { LuLanguages } from "react-icons/lu";
-import { useState } from "react";
 import { Text } from "@chakra-ui/react";
+import { useTranslation } from 'react-i18next';
+import { lang } from "../../data";
 
 const LangMenu = () => {
-    const [lang, setLang] = useState("asc");
+    const { i18n, t } = useTranslation(['header']);
 
     return (
         <MenuRoot>
@@ -19,20 +20,30 @@ const LangMenu = () => {
                 <Button 
                     variant='ghost' 
                     color='white' 
+                    bg='blu'
                     _hover={{ color: 'grn' }} 
                     _focusVisible={{ outline: 'none' }}
                 >
                     <LuLanguages />
-                    <Text fontSize='md' hideBelow='md'>Lang</Text>
+                    <Text fontSize='md' hideBelow='md'>{t('lang')}</Text>
                 </Button>
             </MenuTrigger>
-            <MenuContent minW="10rem">
+            <MenuContent minW="10rem" bg='blu'>
                 <MenuRadioItemGroup
-                    value={lang}
-                    onValueChange={(e) => setLang(e.value)}
+                    value={i18n.language}
+                    onValueChange={e => i18n.changeLanguage(e.value)}
                 >
-                <MenuRadioItem value="asc">Ascending</MenuRadioItem>
-                <MenuRadioItem value="desc">Descending</MenuRadioItem>
+                    {
+                        Object.entries(lang).map(([k, l]) => (
+                            <MenuRadioItem 
+                                key={k} 
+                                value={k}
+                                _hover={{color: 'grn'}}
+                            >
+                                {l}
+                            </MenuRadioItem>
+                        ))
+                    }
                 </MenuRadioItemGroup>
             </MenuContent>
         </MenuRoot>
