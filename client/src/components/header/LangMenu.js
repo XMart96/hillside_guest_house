@@ -39,6 +39,7 @@ const LangMenu = () => {
                                 key={k} 
                                 value={k}
                                 _hover={{color: 'grn'}}
+                                color='white'
                             >
                                 {l}
                             </MenuRadioItem>

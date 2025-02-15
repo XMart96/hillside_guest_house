@@ -1,0 +1,10 @@
+{
+    "checkIn": "Check In",
+    "checkOut": "Check Out",
+    "adult": "Adult",
+    "children": "Children",
+    "button": "Check Availability",
+    "errorCheckIn": "Check In date is required",
+    "errorCheckOut": "Check Out date is required",
+    "errorAdult": "Adult count is required"
+}

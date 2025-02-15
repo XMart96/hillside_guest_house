@@ -9,14 +9,16 @@ import {
     DrawerCloseTrigger,
     DrawerFooter
 } from "@/components/ui/drawer";
-import { Button, Text } from "@chakra-ui/react";
 import { LuMenu } from "react-icons/lu";
 import Logo from './Logo';
 import Nav from "./Nav";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import Rights from "../footer/Rights";
+import { DrawerBtn } from "../elements";
 
 const Drawer = () => {
     const [open, setOpen] = useState(false);
+
     return(
         <DrawerRoot 
             placement="start" 
@@ -25,14 +27,13 @@ const Drawer = () => {
         >
             <DrawerBackdrop />
             <DrawerTrigger asChild>
-                <Button 
+                <DrawerBtn 
                     variant="ghost" 
                     hideFrom='md' 
-                    color='gry' 
                     _hover={{ bg: 'blu', color: 'grn' }}
                 >
                     <LuMenu />
-                </Button>
+                </DrawerBtn>
             </DrawerTrigger>
             <DrawerContent offset="4" rounded="md" bg='blu'>
                 <DrawerHeader>
@@ -44,9 +45,9 @@ const Drawer = () => {
                     <Nav onClose={() => setOpen(false)} />
                 </DrawerBody>
                 <DrawerFooter>
-                    <Text>Hillside all rights reserved</Text>
+                    <Suspense><Rights /></Suspense>
                 </DrawerFooter>
-                <DrawerCloseTrigger />
+                <DrawerCloseTrigger color='grn'/>
             </DrawerContent>
         </DrawerRoot>
     );
