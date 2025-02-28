@@ -4,13 +4,11 @@ import { Field } from '@/components/ui/field';
 import image from '../../assets/room4/9-min.jpg';
 import { useTranslation } from 'react-i18next';
 import { Controller, useForm } from 'react-hook-form';
-import { Btn } from '../elements';
+import  Btn from '../elements/Btn';
 
 const HomePage = () => {
     const { t } = useTranslation(['mainPageForm']);
-    
     const { register, handleSubmit, control, formState: { errors } } = useForm();
-
     const onSubmit = handleSubmit(data => console.log(data));
 
     return (

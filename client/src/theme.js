@@ -10,7 +10,8 @@ const config = defineConfig({
         tokens: {
             fonts: {
                 body: { value: 'Noto Sans, serif' },
-                logo: { value: 'Mr Dafoe, cursive' }
+                logo: { value: 'Mr Dafoe, cursive' },
+                heading: { value: 'Noto Sans, serif' }
             },
             colors: {
                 blu: { value: '#0e2737' },

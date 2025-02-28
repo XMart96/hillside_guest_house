@@ -14,7 +14,7 @@ import Logo from './Logo';
 import Nav from "./Nav";
 import { Suspense, useState } from "react";
 import Rights from "../footer/Rights";
-import { DrawerBtn } from "../elements";
+import Btn  from "../elements/Btn";
 
 const Drawer = () => {
     const [open, setOpen] = useState(false);
@@ -27,13 +27,13 @@ const Drawer = () => {
         >
             <DrawerBackdrop />
             <DrawerTrigger asChild>
-                <DrawerBtn 
-                    variant="ghost" 
-                    hideFrom='md' 
-                    _hover={{ bg: 'blu', color: 'grn' }}
+                <Btn 
+                    hideFrom='md'
+                    bg='transparent' 
+                    color='gry'
                 >
                     <LuMenu />
-                </DrawerBtn>
+                </Btn>
             </DrawerTrigger>
             <DrawerContent offset="4" rounded="md" bg='blu'>
                 <DrawerHeader>

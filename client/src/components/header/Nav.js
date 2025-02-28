@@ -23,6 +23,7 @@ const Nav = ({ onClose }) => {
                         _focus={{ outline: 'none' }}
                         fontSize={{base: 'lg', md: 'md'}}
                         onClick={onClose}
+                        transition='0.2s'
                     >
                         {t(i.label)}
                     </ChakraLink>

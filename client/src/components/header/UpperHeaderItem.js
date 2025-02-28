@@ -8,6 +8,7 @@ const UpperHeaderItem = ({ href, icon, text }) => (
         color='white' 
         _hover={{ color: 'grn', textDecoration: 'none'}} 
         _focus={{outline: 'none'}}
+        transition='0.2s'
     >
         {icon} 
         <Text hideBelow='md'>{text}</Text>
