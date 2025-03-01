@@ -1,4 +1,4 @@
-import { Flex, Box, Image, Input } from '@chakra-ui/react';
+import { Flex, Input } from '@chakra-ui/react';
 import { NumberInputRoot, NumberInputField } from '@/components/ui/number-input';
 import { Field } from '@/components/ui/field';
 import image from '../../assets/room4/9-min.jpg';
@@ -12,8 +12,14 @@ const HomePage = () => {
     const onSubmit = handleSubmit(data => console.log(data));
 
     return (
-        <Box position="relative">
-            <Image w="100%" h="85.4vh" src={image} alt="Background" objectFit="cover" />
+        <Flex 
+            position="relative"
+            flex='1'
+            bgImage={`url(${image})`}
+            bgSize='cover'
+            backgroundPosition='center'
+        >
+            
             <Flex
                 position="absolute"
                 bottom="10"
@@ -106,7 +112,7 @@ const HomePage = () => {
                     </Flex>
                 </form>
             </Flex>
-        </Box>
+        </Flex>
     );
 };
 

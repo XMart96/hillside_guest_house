@@ -11,6 +11,7 @@ const LowerHeader = () => {
             px='5' 
             justify={{base: 'space-between', md: 'space-around'}} 
             align='center'
+            h='70px'
         >
             <Flex>
                 <LogoText />

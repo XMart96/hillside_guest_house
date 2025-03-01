@@ -11,6 +11,7 @@ const UpperHeader = () => (
         py='1' 
         justify={{base: 'space-between', md: 'space-around'}} 
         align='center'
+        h='50px'
     >
         <Flex gap={{base: 8, md: 5}}>
             <UpperHeaderItem href={`tel:${phone}`} icon={<LuPhone />} text={phone} />
