@@ -2,9 +2,12 @@
     "checkIn": "Check In",
     "checkOut": "Check Out",
     "adult": "Adult",
-    "children": "Children",
     "button": "Check Availability",
-    "errorCheckIn": "Check In date is required",
-    "errorCheckOut": "Check Out date is required",
-    "errorAdult": "Adult count is required"
+    "requiredCheckIn": "Check In date is required",
+    "requiredCheckOut": "Check Out date is required",
+    "requiredAdult": "Adult count is required",
+    "errorCheckIn": "Check In date is not valid",
+    "errorCheckOut": "Check Out date is not valid",
+    "errorMinAdult": "The number of adults should not be less than 1",
+    "errorMaxAdult": "The number of adults should not be more than 8"
 }
