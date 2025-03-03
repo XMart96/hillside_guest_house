@@ -68,3 +68,18 @@ export const news = [
         date: '28.10.2023'
     }
 ];
+
+export const socialLinks = [
+    {
+        name: 'WhatsApp',
+        url: `https://wa.me/${phone.slice(1)}`
+    },
+    {
+        name: 'Telegram',
+        url: 'https://t.me/XMart'
+    },
+    {
+        name: 'Viber',
+        url: `viber://chat?number=%2B${phone.slice(1)}`
+    }
+];

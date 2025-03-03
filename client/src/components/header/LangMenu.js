@@ -1,3 +1,12 @@
+/*
+*   FileName: LangMenu.js
+*   Redactor: Visual Studio Code
+*   TabSize: 4
+*   Author: Khachatur Martirosyan
+*   brief: The LangMenu component displays a language selection menu that allows users to change the app's language.
+*   It uses Chakra UI components, React Icons, and react-i18next for language handling.
+*/
+
 import { 
     MenuContent,
     MenuRadioItem,
@@ -7,7 +16,7 @@ import {
 } from "@/components/ui/menu";
 import { Button } from "@/components/ui/button";
 import { LuLanguages } from "react-icons/lu";
-import { Text } from "@chakra-ui/react";
+import { Text, Icon } from "@chakra-ui/react";
 import { useTranslation } from 'react-i18next';
 import { lang } from "../../data";
 
@@ -23,8 +32,10 @@ const LangMenu = () => {
                     bg='blu'
                     _hover={{ color: 'grn' }} 
                     _focusVisible={{ outline: 'none' }}
+                    m='0'
+                    p='0'
                 >
-                    <LuLanguages />
+                    <Icon as={LuLanguages} fontSize='20px' />
                     <Text fontSize='md' hideBelow='md'>{t('lang')}</Text>
                 </Button>
             </MenuTrigger>

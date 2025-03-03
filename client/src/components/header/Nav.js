@@ -1,4 +1,13 @@
-import { Flex, Link as ChakraLink } from "@chakra-ui/react";
+/*
+*   FileName: Nav.js
+*   Redactor: Visual Studio Code
+*   TabSize: 4
+*   Author: Khachatur Martirosyan
+*   brief: The Nav component renders a navigation menu with links to different pages. 
+*   It uses Chakra UI for styling and React Router's Link for navigation, along with translations from react-i18next.
+*/
+
+import { Link as ChakraLink, Stack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { nav } from "../../data";
 import { useTranslation } from 'react-i18next';
@@ -7,11 +16,7 @@ const Nav = ({ onClose }) => {
     const { t } = useTranslation(['header']);
 
     return (
-        <Flex 
-            gap='5' 
-            align='start' 
-            direction={{ base: 'column', md: 'row' }}
-        >
+        <Stack gap='5' direction={{ base: 'column', md: 'row' }}>
             {
                 nav.map(i => (
                     <ChakraLink 
@@ -29,7 +34,7 @@ const Nav = ({ onClose }) => {
                     </ChakraLink>
                 ))
             }
-        </Flex>
+        </Stack>
     );
 };
 

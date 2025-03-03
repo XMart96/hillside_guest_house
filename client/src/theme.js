@@ -2,8 +2,8 @@ import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 
 const config = defineConfig({
     globalCss: {
-        'svg': {
-            fontSize: '1.25em'
+        body: {
+            bg: 'gryBg'
         }
     },
     theme: {
@@ -16,7 +16,8 @@ const config = defineConfig({
             colors: {
                 blu: { value: '#0e2737' },
                 grn: { value: '#1cc3b2' },
-                gry: { value: '#636a76' }
+                gry: { value: '#636a76' },
+                gryBg: { value: '#ededed'}
             }
         }
     }

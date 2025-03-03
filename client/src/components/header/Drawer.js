@@ -1,3 +1,13 @@
+/*
+*   FileName: Drawer.js
+*   Redactor: Visual Studio Code
+*   TabSize: 4
+*   Author: Khachatur Martirosyan
+*   brief: The Drawer component renders a side navigation drawer that appears on smaller screens. 
+*   It includes a menu button, the logo, navigation links, and rights information.
+*   Chakra UI and react-icons are used for UI components and icons.
+*/
+
 import {
     DrawerBackdrop,
     DrawerBody,
@@ -13,7 +23,7 @@ import { LuMenu } from "react-icons/lu";
 import Logo from './Logo';
 import Nav from "./Nav";
 import { Suspense, useState } from "react";
-import Rights from "../footer/Rights";
+import Rights from "../elements/Rights";
 import Btn  from "../elements/Btn";
 
 const Drawer = () => {

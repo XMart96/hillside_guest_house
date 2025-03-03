@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Controller, useForm } from 'react-hook-form';
 import Btn from './Btn';
 
-const MainPageForm = () => {
+const HomePageForm = () => {
     const { t } = useTranslation(['mainPageForm']);
     const { register, handleSubmit, formState: { errors }, reset, control } = useForm({ 
         mode: 'onChange', 
@@ -28,7 +28,6 @@ const MainPageForm = () => {
                 <Field.Root invalid={!!errors.checkIn}>
                     <Field.Label>
                         {t('checkIn')}
-                        <Field.RequiredIndicator />
                     </Field.Label>
                     <Input 
                         type='date'
@@ -51,7 +50,6 @@ const MainPageForm = () => {
                 <Field.Root invalid={!!errors.checkOut}>
                     <Field.Label>
                         {t('checkOut')}
-                        <Field.RequiredIndicator />
                     </Field.Label>
                     <Input
                         type='date' 
@@ -73,7 +71,6 @@ const MainPageForm = () => {
                 <Field.Root invalid={!!errors.adult}>
                     <Field.Label>
                         {t('adult')}
-                        <Field.RequiredIndicator />
                     </Field.Label>
                     <Controller
                         control={control}
@@ -115,4 +112,4 @@ const MainPageForm = () => {
     );
 }
 
-export default MainPageForm;
+export default HomePageForm;
