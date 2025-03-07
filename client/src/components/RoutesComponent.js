@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Layout from './pages/Layout';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import RoomsPage from './pages/RoomsPage';
-import SingleRoomPage from './pages/SingleRoomPage';
-import ServicesPage from './pages/ServicesPage';
-import NewsPage from './pages/NewsPage';
-import SingleNewsPage from './pages/SingleNewsPage';
-import ContactsPage from './pages/ContactsPage';
-import BookNowPage from './pages/BookNowPage';
-import NotFoundPage from './pages/NotFoundPage';
+import Layout from '@pages/Layout';
+import HomePage from '@pages/HomePage';
+import AboutPage from '@pages/AboutPage';
+import RoomsPage from '@pages/RoomsPage';
+import SingleRoomPage from '@pages/SingleRoomPage';
+import ServicesPage from '@pages/ServicesPage';
+import NewsPage from '@pages/NewsPage';
+import SingleNewsPage from '@pages/SingleNewsPage';
+import ContactsPage from '@pages/ContactsPage';
+import BookNowPage from '@pages/BookNowPage';
+import NotFoundPage from '@pages/NotFoundPage';
 
 const RoutesComponent = () => (
     <BrowserRouter future={{v7_relativeSplatPath: true, v7_startTransition: true}}>

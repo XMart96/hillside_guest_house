@@ -1,4 +1,4 @@
-import HomePageBgForm from '../elements/HomePageBgForm';
+import HomePageBgForm from '@components/HomePageBgForm';
 
 const HomePage = () => (
     <HomePageBgForm />

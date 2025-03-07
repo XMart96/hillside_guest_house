@@ -3,19 +3,19 @@
 *   Redactor: Visual Studio Code
 *   TabSize: 4
 *   Author: Khachatur Martirosyan
-*   brief: The Footer component renders the upper and lower footer sections using Chakra UI's Stack component.
+*   brief: The Footer component renders the upper and lower footer sections using Chakra UI's Box component.
 *   It provides a structured layout for footer content, such as links, contact details, and copyright information.
 */
 
-import { Stack } from '@chakra-ui/react';
-import UpperFooter from './UpperFooter';
-import LowerFooter from './LowerFooter';
+import { Box } from '@chakra-ui/react';
+import UpperFooter from '@footer/UpperFooter';
+import LowerFooter from '@footer/LowerFooter';
 
 const Footer = () => (
-    <Stack as='footer' gap='0' bg='blu'>
+    <Box as='footer' bg='blu'>
         <UpperFooter />
         <LowerFooter />
-    </Stack>
+    </Box>
 );
 
 export default Footer;

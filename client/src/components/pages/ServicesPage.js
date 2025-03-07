@@ -1,10 +1,9 @@
 import { Flex } from "@chakra-ui/react";
-import image from '../../assets/room2/11-min.jpg';
-import HeaderSection from "../elements/HeaderSection";
+import HeaderSection from "@/components/HeaderSection";
 
 const ServicesPage = () => (
     <Flex direction='column'>
-        <HeaderSection bg={image} header='Services' />
+        <HeaderSection bg='/assets/room2/11-min.jpg' header='Services' />
     </Flex>
 );
 

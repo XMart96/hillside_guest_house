@@ -1,16 +1,28 @@
-import { Stack } from "@chakra-ui/react";
-import image from '../../assets/room3/10-min.jpg';
-import HeaderSection from "../elements/HeaderSection";
-import YandexMaps from "../elements/YandexMaps";
+/*
+*   FileName: ContactsPage.js
+*   Redactor: Visual Studio Code
+*   TabSize: 4
+*   Author: Khachatur Martirosyan
+*   brief: The ContactsPage component renders the contact information section of the website, 
+*   including phone, email, working hours, address, and an interactive map.
+*   The page utilizes components like HeaderSection, ContactInfoBox, and YandexMaps.
+*/
+
+import { Box, Wrap } from "@chakra-ui/react";
+import HeaderSection from "@components/HeaderSection";
+import YandexMaps from "@components/YandexMaps";
 import { LuClock, LuMail, LuMapPin, LuPhone } from "react-icons/lu";
-import ContactInfoBox from "../elements/ContactInfoBox";
-import { phone, email } from "../../data";
+import ContactInfoBox from "@components/ContactInfoBox";
+import { phone, email } from "@/data";
 import { useTranslation } from "react-i18next";
-import PageContainer from "../elements/PageContainer";
-import ContactUsNow from "../elements/ContactUsNow";
+import { 
+    WrapContainer, 
+    PageElemContainer
+} from "@components/layoutElements";
 
 const ContactsPage = () => {
     const { t } = useTranslation(['contactInfo']);
+    
     const iconsInfo = [
         {
             icon: LuPhone,
@@ -39,20 +51,21 @@ const ContactsPage = () => {
             type: 'address'
         }
     ];
-    
+
     return (
-        <Stack gap='0'>
-            <HeaderSection bg={image} />
-            <Stack align='center'>
-                <PageContainer flexWrap='wrap'>
-                    {iconsInfo.map((i, k) => (
-                        <ContactInfoBox key={k} {...i} />
-                    ))}
+        <Box>
+            <HeaderSection bg='/assets/room3/10-min.jpg' />
+            <WrapContainer>
+                <PageElemContainer>
+                    <Wrap>
+                        {iconsInfo.map(i => (
+                            <ContactInfoBox key={i.type} {...i} />
+                        ))}
+                    </Wrap>
                     <YandexMaps /> 
-                </PageContainer>
-                <ContactUsNow />
-            </Stack>
-        </Stack>
+                </PageElemContainer>
+            </WrapContainer>
+        </Box>
     );
 };
 

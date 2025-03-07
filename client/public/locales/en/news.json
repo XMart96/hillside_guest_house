@@ -1,0 +1,40 @@
+{
+    "news": [
+        {
+            "id": 1,
+            "date": "28.09.2023",
+            "imgPath": "/assets/other/eggs.jpg",
+            "details": {
+                "header": "Fresh Egg Breakfasts",
+                "subheader": "Delicious Breakfast at Hillside Guest house: Fresh Egg Dishes",
+                "p1": "Eating eggs in the morning provides your body with essential protein and amino acids, keeping you energized all day. There are over two dozen ways to cook eggs. Plus, eggs are easy to digest and keep you feeling full.",
+                "p2": "Our menu can offer you eggs Benedict, omelet, scrambled eggs, boiled eggs, eggs with basturma, eggs with tomatoes, and more!",
+                "p3": "We serve incredibly fresh eggs—straight from our own chicken farm!",
+                "p4": "Enjoyed your breakfast? Great! Now, let's explore the beautiful and historic city of Yerevan!"
+            }
+        },
+        {
+            "id": 2,
+            "date": "30.09.2023",
+            "imgPath": "/assets/other/mir.jpg",
+            "details": {
+                "header": "Mir Payment System",
+                "subheader": "What Currency Should You Bring to Armenia?",
+                "p1": "When traveling to Armenia, you can bring any currency of your choice. Dollars, euros, and rubles can be easily exchanged for drams at any bank branch or exchange office, which are widely available throughout the country.",
+                "p2": "What about credit cards? Most stores accept major payment systems such as MasterCard, Visa, and Maestro. However, there are some difficulties with the Russian MIR payment system due to SWIFT-related sanctions, and withdrawing money from these cards is not always possible. Therefore, it’s a good idea to bring cash with you to Armenia—it’s the most reliable option.",
+                "p3": "Hillside Guest House accepts payments in any method convenient for the guest."            
+            }
+        },
+        {
+            "id": 3,
+            "date": "28.10.2023",
+            "imgPath": "/assets/other/discount.jpg",
+            "details": {
+                "header": "Discounts",
+                "subheader": "Attention! Winter is the perfect time for deals and bonuses!",
+                "p1": "From November 1, 2022, to February 28, 2023, Hillside Guesthouse is offering significant discounts on accommodation. During this period, you can book a room at 15% off the regular price. A discount on accommodation in the heart of Yerevan is great news for travelers!"
+            }
+        }
+    ],
+    "btn": "Read more"
+}

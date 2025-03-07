@@ -1,4 +1,4 @@
-export const phone = '+37443290127';
+export const phone = '+37444290127';
 export const email = 'info@hillside.am';
 export const instaURL = 'https://www.instagram.com/hillside.guest.house/';
 export const mapsKey = 'dc0dc115-2aa4-4828-8921-6e5e45e3425e';
@@ -51,24 +51,6 @@ export const rooms = [
     },
 ];
 
-export const news = [
-    {
-        id: 1,
-        name: 'Fresh egg breakfasts',
-        date: '28.09.2023'
-    },
-    {
-        id: 2,
-        name: 'Mir payment system',
-        date: '30.09.2023'
-    },
-    {
-        id: 3,
-        name: 'Discounts',
-        date: '28.10.2023'
-    }
-];
-
 export const socialLinks = [
     {
         name: 'WhatsApp',
@@ -77,9 +59,5 @@ export const socialLinks = [
     {
         name: 'Telegram',
         url: 'https://t.me/XMart'
-    },
-    {
-        name: 'Viber',
-        url: `viber://chat?number=%2B${phone.slice(1)}`
     }
 ];

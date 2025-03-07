@@ -21,7 +21,7 @@ const ContactLinkItem = ({ href, icon, text, hide }) => (
         transition='0.2s'
     >
         <Icon as={icon} fontSize='20px' /> 
-        <Text hideBelow={hide ? "md": undefined}>{text}</Text>
+        <Text hideBelow={hide ? "md": null}>{text}</Text>
     </ChakraLink>
 );
 

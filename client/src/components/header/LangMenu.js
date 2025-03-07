@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { LuLanguages } from "react-icons/lu";
 import { Text, Icon } from "@chakra-ui/react";
 import { useTranslation } from 'react-i18next';
-import { lang } from "../../data";
+import { lang } from "@/data";
 
 const LangMenu = () => {
     const { i18n, t } = useTranslation(['header']);
@@ -32,8 +32,8 @@ const LangMenu = () => {
                     bg='blu'
                     _hover={{ color: 'grn' }} 
                     _focusVisible={{ outline: 'none' }}
-                    m='0'
-                    p='0'
+                    display="flex"
+                    alignItems="center"
                 >
                     <Icon as={LuLanguages} fontSize='20px' />
                     <Text fontSize='md' hideBelow='md'>{t('lang')}</Text>

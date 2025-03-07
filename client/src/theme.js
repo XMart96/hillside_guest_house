@@ -3,6 +3,7 @@ import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
 const config = defineConfig({
     globalCss: {
         body: {
+            boxSizing: 'border-box',
             bg: 'gryBg'
         }
     },

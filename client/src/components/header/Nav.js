@@ -9,7 +9,7 @@
 
 import { Link as ChakraLink, Stack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { nav } from "../../data";
+import { nav } from "@/data";
 import { useTranslation } from 'react-i18next';
 
 const Nav = ({ onClose }) => {
@@ -18,11 +18,11 @@ const Nav = ({ onClose }) => {
     return (
         <Stack gap='5' direction={{ base: 'column', md: 'row' }}>
             {
-                nav.map(i => (
+                nav.map(({ label, path }) => (
                     <ChakraLink 
                         as={Link} 
-                        key={i.path} 
-                        to={i.path}
+                        key={path} 
+                        to={path}
                         color={{base: 'white', md: 'gry'}}
                         _hover={{ color: 'grn', textDecoration: 'none'}}
                         _focus={{ outline: 'none' }}
@@ -30,7 +30,7 @@ const Nav = ({ onClose }) => {
                         onClick={onClose}
                         transition='0.2s'
                     >
-                        {t(i.label)}
+                        {t(label)}
                     </ChakraLink>
                 ))
             }

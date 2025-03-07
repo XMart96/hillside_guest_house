@@ -7,22 +7,21 @@
 *   and a drawer for mobile view. It uses Chakra UI components for layout and responsive design.
 */
 
-import { Box, Center, HStack, useBreakpointValue } from "@chakra-ui/react";
-import LogoText from "../elements/LogoText";
-import Drawer from "./Drawer";
-import Nav from "./Nav";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
+import LogoText from "@components/LogoText";
+import Drawer from "@header/Drawer";
+import Nav from "@header/Nav";
+import { WrapContainer } from "@components/layoutElements";
 
 const LowerHeader = () => {
     const isMobile = useBreakpointValue({base: true, md: false});
     
     return (
-        <Box w='100%' bg='white'>   
-            <Center>
-                <HStack px='5' justify='space-between' maxW='1100px' w='100%'>
-                    <LogoText />
-                    {!isMobile ? <Nav /> : <Drawer />}
-                </HStack>
-            </Center>
+        <Box bg='white'>   
+            <WrapContainer justify='space-between'>
+                <LogoText />
+                {!isMobile ? <Nav /> : <Drawer />}
+            </WrapContainer>
         </Box>
     );
 };

@@ -1,14 +1,16 @@
-import { Stack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
-import Header from '../header/Header';
-import Footer from "../footer/Footer";
+import Header from '@header/Header';
+import ContactUsNow from '@components/ContactUsNow';
+import Footer from "@footer/Footer";
 
 const Layout = () => (
-    <Stack gap='0'>
+    <Box>
         <Header />
         <Outlet />
+        <ContactUsNow />
         <Footer />
-    </Stack>
+    </Box>
 );
 
 export default Layout;

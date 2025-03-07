@@ -7,32 +7,31 @@
 *   It includes phone, email, Instagram, and a language menu.
 */
 
-import { Box, Center, HStack, IconButton } from "@chakra-ui/react";
+import { Box, HStack, IconButton } from "@chakra-ui/react";
 import { LuPhone, LuMail, LuInstagram } from "react-icons/lu";
-import ContactLinkItem from "../elements/ContactLinkItem";
-import LangMenu from "./LangMenu";
-import { phone, email, instaURL } from "../../data";
+import ContactLinkItem from "@components/ContactLinkItem";
+import LangMenu from "@header/LangMenu";
+import { phone, email, instaURL } from "@/data";
+import { WrapContainer } from "@components/layoutElements";
 
 const UpperHeader = () => (
-    <Box w='100%' bg='blu'>
-        <Center>
-            <HStack px='5' py='1' justify='space-between' maxW='1100px' w='100%'>
-                <HStack gap='8'>
-                    <ContactLinkItem hide href={`tel:${phone}`} icon={LuPhone} text={phone} />
-                    <ContactLinkItem hide href={`mailto:${email}`} icon={LuMail} text={email} />
-                </HStack>
-                <HStack gap='5'>
-                    <ContactLinkItem 
-                        href={instaURL}
-                        icon={LuInstagram} 
-                        text='Instagram'
-                        as={IconButton}
-                        hide
-                    />
-                    <LangMenu />
-                </HStack>
+    <Box bg="blu">
+        <WrapContainer justify='space-between'>
+            <HStack gap="8">
+                <ContactLinkItem hide href={`tel:${phone}`} icon={LuPhone} text={phone} />
+                <ContactLinkItem hide href={`mailto:${email}`} icon={LuMail} text={email} />
             </HStack>
-        </Center>
+            <HStack gap="3.5">
+                <ContactLinkItem 
+                    href={instaURL}
+                    icon={LuInstagram} 
+                    text="Instagram"
+                    as={IconButton}
+                    hide
+                />
+                <LangMenu />
+            </HStack>
+        </WrapContainer>
     </Box>
 );
 

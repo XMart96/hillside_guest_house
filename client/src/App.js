@@ -1,4 +1,4 @@
-import RoutesComponent from "./components/RoutesComponent";
+import RoutesComponent from "@components/RoutesComponent";
 
 const App = () => <RoutesComponent />;
 

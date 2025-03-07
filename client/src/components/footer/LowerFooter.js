@@ -7,14 +7,15 @@
 *   It includes copyright or legal information, displayed using the Rights component.
 */
 
-import { Box, Center } from '@chakra-ui/react';
-import Rights from '../elements/Rights';
+import { Box } from '@chakra-ui/react';
+import { WrapContainer } from '@components/layoutElements';
+import Rights from '@components/Rights';
 
 const LowerFooter = () => (
-    <Box w='100%'>
-        <Center pb='5' px='5'>
+    <Box>
+        <WrapContainer justify='center' pb='5'>
             <Rights />
-        </Center>
+        </WrapContainer>
     </Box>
 );
 

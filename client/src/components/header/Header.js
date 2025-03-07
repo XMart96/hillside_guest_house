@@ -7,15 +7,15 @@
 *   The UpperHeader and LowerHeader components are rendered inside a Stack with no gap between them.
 */
 
-import { Stack } from "@chakra-ui/react"
-import UpperHeader from "./UpperHeader";
-import LowerHeader from "./LowerHeader";
+import { Box } from "@chakra-ui/react"
+import UpperHeader from "@/components/header/UpperHeader";
+import LowerHeader from "@/components/header/LowerHeader";
 
 const Header = () => (
-    <Stack as="header" gap='0'>
+    <Box>
         <UpperHeader />
         <LowerHeader />
-    </Stack>
+    </Box>
 );
 
 export default Header;

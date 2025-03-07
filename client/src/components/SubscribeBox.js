@@ -9,7 +9,7 @@
 */
 
 import { Field, Input } from "@chakra-ui/react";
-import Btn from "../elements/Btn";
+import { Btn } from "@components/elements";
 import { LuMail } from "react-icons/lu";
 import { useForm } from 'react-hook-form';
 import { useTranslation } from "react-i18next";

@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 
-const Btn = ({children, ...props}) => (
+export const Btn = ({children, ...props}) => (
     <Button
         bg="grn"
         color="white"
@@ -12,5 +12,3 @@ const Btn = ({children, ...props}) => (
         {children}
     </Button>
 );
-
-export default Btn;

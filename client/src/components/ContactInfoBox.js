@@ -1,8 +1,8 @@
-import { Heading, Icon, Stack, Text, Link as ChakraLink } from "@chakra-ui/react";
+import { Heading, Icon, Flex, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const ContactInfoBox = ({ icon, header, text, type, link = false }) => (
-    <Stack alignItems='center' flex='1' color='gry' minW='150px' my='2.5' gap='2'>
+    <Flex direction='column' align='center' flex='1' color='gry' my='3' minW='150px' gap='2'>
         <Icon as={icon} color='grn' fontSize='40px' />
         <Heading size='lg'>{header}</Heading>
         { link ? 
@@ -18,7 +18,7 @@ const ContactInfoBox = ({ icon, header, text, type, link = false }) => (
             </ChakraLink> 
             : <Text textAlign='center'>{text}</Text>
         }
-    </Stack>
+    </Flex>
 );
 
 export default ContactInfoBox;
