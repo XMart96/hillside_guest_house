@@ -14,43 +14,6 @@ export const nav = [
     { path: '/book', label: 'book' }
 ];
 
-export const lang = {
-    en: 'English',
-    ru: 'Русский',
-    am: 'Հայերեն'
-};
-
-export const rooms = [
-    { 
-        id: 1, 
-        name: 'Double Room DELUX', 
-        price: 26000,
-        priceWithBreakfast: 30000,
-        size: 32 
-    },
-    { 
-        id: 2, 
-        name: 'Double Room STANDART', 
-        price: 22000,
-        priceWithBreakfast: 26000,
-        size: 23 
-    },
-    { 
-        id: 3, 
-        name: 'Double Room STANDART PLUS', 
-        price: 24000,
-        priceWithBreakfast: 28000,
-        size: 25 
-    },
-    { 
-        id: 4, 
-        name: 'Double Room COMFORT PLUS', 
-        price: 26000,
-        priceWithBreakfast: 30000,
-        size: 27
-    },
-];
-
 export const socialLinks = [
     {
         name: 'WhatsApp',
@@ -58,6 +21,6 @@ export const socialLinks = [
     },
     {
         name: 'Telegram',
-        url: 'https://t.me/XMart'
+        url: 'https://t.me/hillside_guest_house'
     }
 ];

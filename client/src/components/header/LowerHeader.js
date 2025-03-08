@@ -18,7 +18,7 @@ const LowerHeader = () => {
     
     return (
         <Box bg='white'>   
-            <WrapContainer justify='space-between'>
+            <WrapContainer justify='space-between' align='center'>
                 <LogoText />
                 {!isMobile ? <Nav /> : <Drawer />}
             </WrapContainer>

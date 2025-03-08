@@ -8,13 +8,13 @@
 *   and react-i18next for translations.
 */
 
-import { Field, Input } from "@chakra-ui/react";
+import { Field, Input, Heading, Flex } from "@chakra-ui/react";
 import { Btn } from "@components/elements";
 import { LuMail } from "react-icons/lu";
 import { useForm } from 'react-hook-form';
 import { useTranslation } from "react-i18next";
 
-const SubscribeBox = () => {
+const SubscribeBox = ({ textColor }) => {
     const { t } = useTranslation(['footer']);
     const { register, handleSubmit, formState: { errors }, reset } = useForm({ mode: 'onChange' }); 
     
@@ -24,33 +24,35 @@ const SubscribeBox = () => {
     });
 
     return (
-        <form onSubmit={onSubmit}>
-            <Field.Root invalid={!!errors.newsletterEmail}>
-                <Field.Label>
-                    {t('subscribeText')}
-                </Field.Label>
-                <Input 
-                    type='email' 
-                    name='newsletterEmail' 
-                    placeholder="email@example.com"
-                    _focusVisible={{ borderColor: 'grn', outlineColor: 'grn' }}
-                    borderColor="gry"
-                    _placeholder={{ color: 'gry' }}
-                    {...register('newsletterEmail', { 
-                        required: t('inputRequired'),
-                        pattern: {
-                            value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
-                            message: t('inputError')
-                        } 
-                    })}
-                />
-                <Field.ErrorText>{errors.newsletterEmail?.message}</Field.ErrorText>
-            </Field.Root>
-            <Btn type="submit" mt='2'>
-                <LuMail /> {t('subscribeButton')}
-            </Btn>
-        </form>
-
+        <Flex direction='column' gap='2' maxW={{ base: "300px", md: "100%" }}>
+            <Heading color={textColor} size='xl'>{t('footer:subscribe')}</Heading>
+            <form onSubmit={onSubmit}>
+                <Field.Root invalid={!!errors.newsletterEmail}>
+                    <Field.Label color={textColor}>
+                        {t('subscribeText')}
+                    </Field.Label>
+                    <Input 
+                        type='email' 
+                        name='newsletterEmail' 
+                        placeholder="email@example.com"
+                        _focusVisible={{ borderColor: 'grn', outlineColor: 'grn' }}
+                        borderColor="gry"
+                        _placeholder={{ color: 'gry' }}
+                        {...register('newsletterEmail', { 
+                            required: t('inputRequired'),
+                            pattern: {
+                                value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+                                message: t('inputError')
+                            } 
+                        })}
+                    />
+                    <Field.ErrorText>{errors.newsletterEmail?.message}</Field.ErrorText>
+                </Field.Root>
+                <Btn type="submit" mt='2'>
+                    <LuMail /> {t('subscribeButton')}
+                </Btn>
+            </form>
+        </Flex>
     );
 };
 

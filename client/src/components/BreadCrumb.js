@@ -1,6 +1,7 @@
 import { Breadcrumb, Link as ChakraLink } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
+import React from "react";
 
 const BreadCrumb = ({ path }) => {
     const { t } = useTranslation(['header']);
@@ -31,11 +32,14 @@ const BreadCrumb = ({ path }) => {
                     path.map((value, index) => {
                         const to = `/${path.slice(0, index + 1).join('/')}`;
                         return (
-                            <Breadcrumb.Item key={index}>
-                                <Breadcrumb.Link asChild>
-                                    {renderCrumbLink(to, value)}
-                                </Breadcrumb.Link>
-                            </Breadcrumb.Item>
+                            <React.Fragment key={index}>
+                                <Breadcrumb.Item>
+                                    <Breadcrumb.Link asChild>
+                                        {renderCrumbLink(to, value)}
+                                    </Breadcrumb.Link>
+                                </Breadcrumb.Item>
+                                {index < path.length - 1 && <Breadcrumb.Separator color='white' />}
+                            </React.Fragment>
                         );
                     })
                 }

@@ -1,0 +1,49 @@
+{
+    "rooms": [
+        {
+            "id": 1,
+            "url": "room1",
+            "imgPath": "/assets/room1/1-min.jpg",
+            "price": "26000",
+            "priceWithBreakfast": "30000",
+            "size": "32",
+            "details": {
+                "header": "(Room 1) Double Room DELUX"
+            }
+        },
+        {
+            "id": 2,
+            "url": "room2",
+            "imgPath": "/assets/room2/1-min.jpg",
+            "price": "22000",
+            "priceWithBreakfast": "26000",
+            "size": "23",
+            "details": {
+                "header": "(Room 2) Double Room STANDART"
+            }
+        },
+        {
+            "id": 3,
+            "url": "room3",
+            "imgPath": "/assets/room3/1-min.jpg",
+            "price": "24000",
+            "priceWithBreakfast": "28000",
+            "size": "25",
+            "details": {
+                "header": "(Room 3) Double Room COMFORT"
+            }
+        },
+        {
+            "id": 4,
+            "url": "room4",
+            "imgPath": "/assets/room4/1-min.jpg",
+            "price": "26000",
+            "priceWithBreakfast": "30000",
+            "size": "27",
+            "details": {
+                "header": "(Room 4) Double Room Superior"
+            }
+        }
+    ],
+    "btn": "See details"
+}

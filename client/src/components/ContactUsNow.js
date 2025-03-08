@@ -31,7 +31,7 @@ const ContactUsNow = () => {
                     h='100%'
                     justify='space-around' 
                     align='center'
-                    p='2.5'
+                    p='5'
                 >
                     <Stack>
                         <Heading size='3xl'>{t('contactUs')}</Heading>

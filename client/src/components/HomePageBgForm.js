@@ -17,7 +17,7 @@ const HomePageBgForm = () => (
             bg="white"
             color="gry"
             rounded="lg"
-            p="6"
+            p="5"
             w={{ base: '95%', sm: '70%', md: 'auto' }}
             shadow="0 10px 15px -3px rgba(0, 0, 0, 0.1)"
         >

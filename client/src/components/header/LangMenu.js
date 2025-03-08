@@ -18,10 +18,15 @@ import { Button } from "@/components/ui/button";
 import { LuLanguages } from "react-icons/lu";
 import { Text, Icon } from "@chakra-ui/react";
 import { useTranslation } from 'react-i18next';
-import { lang } from "@/data";
 
 const LangMenu = () => {
     const { i18n, t } = useTranslation(['header']);
+
+    const lang = {
+        en: 'English',
+        ru: 'Русский',
+        am: 'Հայերեն'
+    };
 
     return (
         <MenuRoot>

@@ -22,7 +22,7 @@ const UpperFooter = () => {
 
     return (
         <Box>
-            <WrapContainer wrap='wrap' justify='center'>
+            <WrapContainer wrap='wrap' justify='center' align='center'>
                 <UpperFooterItem flex='2'>
                     <LogoText />
                     <ContactLinkItem href={`tel:${phone}`} icon={LuPhone} text={phone} />
@@ -42,7 +42,6 @@ const UpperFooter = () => {
                     <Text>ddd</Text>
                 </UpperFooterItem>
                 <UpperFooterItem flex='2'>
-                    <Heading size='xl'>{t('footer:subscribe')}</Heading>
                     <SubscribeBox />
                 </UpperFooterItem>
             </WrapContainer>

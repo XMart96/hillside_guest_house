@@ -3,6 +3,7 @@
         {
             "id": 1,
             "date": "28.09.2023",
+            "url": "breakfast",
             "imgPath": "/assets/other/eggs.jpg",
             "details": {
                 "header": "Fresh Egg Breakfasts",
@@ -16,6 +17,7 @@
         {
             "id": 2,
             "date": "30.09.2023",
+            "url": "mir",
             "imgPath": "/assets/other/mir.jpg",
             "details": {
                 "header": "Mir Payment System",
@@ -28,6 +30,7 @@
         {
             "id": 3,
             "date": "28.10.2023",
+            "url": "discount",
             "imgPath": "/assets/other/discount.jpg",
             "details": {
                 "header": "Discounts",
