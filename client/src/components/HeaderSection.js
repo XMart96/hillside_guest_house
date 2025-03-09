@@ -4,10 +4,16 @@ import { useTranslation } from "react-i18next";
 import BreadCrumb from "@components/BreadCrumb";
 
 const HeaderSection = ({ bg }) => {
-    const { t } = useTranslation(['header']);
+    const { t } = useTranslation(['links']);
     const location = useLocation();
     const pathNames = location.pathname.split('/').filter(x => x);
-    
+
+    const allLinks = [
+        ...t("links", { returnObjects: true }), 
+        ...t("rooms", { returnObjects: true }), 
+        ...t("news", { returnObjects: true })
+    ];
+
     return (
         <Stack 
         h='250px'
@@ -17,10 +23,12 @@ const HeaderSection = ({ bg }) => {
         justify='center'
         align='center'
         >
-            <Heading size='4xl' mb='1'>{t(pathNames)}</Heading>
-            <BreadCrumb path={pathNames} />
+            <Heading size='4xl' mb='1'>
+                {allLinks.find(i => i.path === location.pathname)?.label}
+            </Heading>
+            <BreadCrumb path={pathNames} links={allLinks} />
         </Stack>
     );
 };
 
-export default HeaderSection
+export default HeaderSection;

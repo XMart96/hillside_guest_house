@@ -1,0 +1,65 @@
+{
+    "links": [
+        {
+            "path": "/",
+            "label": "Գլխավոր"
+        },
+        {
+            "path": "/about",
+            "label": "Մեր Մասին"
+        },
+        {
+            "path": "/rooms",
+            "label": "Սենյակներ"
+        },
+        {
+            "path": "/services",
+            "label": "Ծառայություններ"
+        },
+        {
+            "path": "/news",
+            "label": "Նորություններ"
+        },
+        {
+            "path": "/contacts",
+            "label": "Կոնտակտներ"
+        },
+        {
+            "path": "/book",
+            "label": "Ամրագրել"
+        }
+    ],
+    "rooms": [
+        {
+            "path": "/room1",
+            "label": "Սենյակ 1"
+        },
+        {
+            "path": "/room2",
+            "label": "Սենյակ 2"
+        },
+        {
+            "path": "/room3",
+            "label": "Սենյակ 3"
+        },
+        {
+            "path": "/room4",
+            "label": "Սենյակ 4"
+        }
+    ],
+    "news": [
+        {
+            "path": "/breakfast",
+            "label": "Նախաճաշեր"
+        },
+        {
+            "path": "/mir",
+            "label": "Mir"
+        },
+        {
+            "path": "/discount",
+            "label": "Զեղչեր"
+        }
+    ],
+    "lang": "Լեզու"
+}

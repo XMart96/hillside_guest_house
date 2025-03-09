@@ -5,7 +5,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { Btn } from '@components/elements';
 
 const HomePageForm = () => {
-    const { t } = useTranslation(['mainPageForm']);
+    const { t } = useTranslation(['homePageForm']);
     const { register, handleSubmit, formState: { errors }, reset, control } = useForm({ 
         mode: 'onChange', 
         defaultValues: {

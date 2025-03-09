@@ -9,16 +9,15 @@
 
 import { Link as ChakraLink, Stack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { nav } from "@/data";
 import { useTranslation } from 'react-i18next';
 
 const Nav = ({ onClose }) => {
-    const { t } = useTranslation(['header']);
+    const { t } = useTranslation(['links']);
 
     return (
         <Stack gap='5' direction={{ base: 'column', md: 'row' }}>
             {
-                nav.map(({ label, path }) => (
+                t('links', { returnObjects: true }).map(({ path, label }) => (
                     <ChakraLink 
                         as={Link} 
                         key={path} 

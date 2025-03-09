@@ -1,0 +1,65 @@
+{
+    "links": [
+        {
+            "path": "/",
+            "label": "Главная"
+        },
+        {
+            "path": "/about",
+            "label": "О Нас"
+        },
+        {
+            "path": "/rooms",
+            "label": "Номера"
+        },
+        {
+            "path": "/services",
+            "label": "Услуги"
+        },
+        {
+            "path": "/news",
+            "label": "Новости"
+        },
+        {
+            "path": "/contacts",
+            "label": "Контакты"
+        },
+        {
+            "path": "/book",
+            "label": "Бронировать"
+        }
+    ],
+    "rooms": [
+        {
+            "path": "/room1",
+            "label": "Номер 1"
+        },
+        {
+            "path": "/room2",
+            "label": "Номер 2"
+        },
+        {
+            "path": "/room3",
+            "label": "Номер 3"
+        },
+        {
+            "path": "/room4",
+            "label": "Номер 4"
+        }
+    ],
+    "news": [
+        {
+            "path": "/breakfast",
+            "label": "Завтраки"
+        },
+        {
+            "path": "/mir",
+            "label": "МИР"
+        },
+        {
+            "path": "/discount",
+            "label": "Скидки"
+        }
+    ],
+    "lang": "Язык"
+}

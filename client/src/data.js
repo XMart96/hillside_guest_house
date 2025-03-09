@@ -4,16 +4,6 @@ export const instaURL = 'https://www.instagram.com/hillside.guest.house/';
 export const mapsKey = 'dc0dc115-2aa4-4828-8921-6e5e45e3425e';
 export const videoURL = 'https://www.youtube.com/embed/W18K8XkTqz0?si=i1BxDHDJExX9IZlp';
 
-export const nav = [
-    { path: '/', label: 'home' },
-    { path: '/about', label: 'about' },
-    { path: '/rooms', label: 'rooms' },
-    { path: '/services', label: 'services' },
-    { path: '/news', label: 'news' },
-    { path: '/contacts', label: 'contacts' },
-    { path: '/book', label: 'book' }
-];
-
 export const socialLinks = [
     {
         name: 'WhatsApp',
