@@ -15,7 +15,7 @@ const ContactLinkItem = ({ href, icon, text, hide }) => (
     <ChakraLink
         as={Link} 
         to={href} 
-        color='white' 
+        color='wht' 
         _hover={{ color: 'grn', textDecoration: 'none'}} 
         _focus={{outline: 'none'}}
         transition='0.2s'

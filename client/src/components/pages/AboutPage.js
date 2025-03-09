@@ -7,7 +7,7 @@ const AboutPage = () => {
     return (
         <Flex direction='column'>
             <HeaderSection bg='/assets/other/11-min.jpg' />
-            <Flex bg='white'>
+            <Flex bg='wht'>
                 <Heading color='gry'>About Hillside Guest House</Heading>
             </Flex>
         </Flex>

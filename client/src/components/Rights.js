@@ -14,7 +14,7 @@ const Rights = () => {
     const { t } = useTranslation(['footer']);
 
     return (
-        <Text color='white'>{t('rights')}</Text>
+        <Text color='wht'>{t('rights')}</Text>
     );
 }
 

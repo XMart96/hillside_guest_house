@@ -18,7 +18,7 @@ export const PageElemContainer = ({ children, ...props }) => (
         w="100%"
         m='3' 
         p='5' 
-        bg='white' 
+        bg='wht' 
         shadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)' 
         rounded='lg'
         {...props}

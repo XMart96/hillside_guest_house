@@ -18,7 +18,8 @@ const config = defineConfig({
                 blu: { value: '#0e2737' },
                 grn: { value: '#1cc3b2' },
                 gry: { value: '#636a76' },
-                gryBg: { value: '#ededed'}
+                gryBg: { value: '#ededed'},
+                wht: { value: '#fafafa' }
             }
         }
     }

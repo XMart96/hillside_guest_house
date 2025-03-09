@@ -11,7 +11,7 @@ const RoomItem = ({ url, imgPath, price, details, btn }) => {
 
     return(
         <PageElemContainer w='null'>
-            <Card.Root maxW="md" overflow="hidden" bg='white' color='gry' border='none'>
+            <Card.Root maxW="md" overflow="hidden" bg='wht' color='gry' border='none'>
                 <Skeleton loading={loading}>
                     <Image
                         src={imgPath}

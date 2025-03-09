@@ -23,7 +23,7 @@ const HeaderSection = ({ bg }) => {
         justify='center'
         align='center'
         >
-            <Heading size='4xl' mb='1'>
+            <Heading size='4xl' mb='1' color='wht'>
                 {allLinks.find(i => i.path === location.pathname)?.label}
             </Heading>
             <BreadCrumb path={pathNames} links={allLinks} />

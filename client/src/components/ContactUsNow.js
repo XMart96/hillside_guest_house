@@ -33,8 +33,8 @@ const ContactUsNow = () => {
                     align='center'
                     p='5'
                 >
-                    <Stack>
-                        <Heading size='3xl'>{t('contactUs')}</Heading>
+                    <Stack color='wht'>
+                        <Heading size={{base: '2xl', md: '3xl'}}>{t('contactUs')}</Heading>
                         <Text>{t('contactUsText')}</Text>
                     </Stack>
                     <HStack>

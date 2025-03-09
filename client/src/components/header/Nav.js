@@ -22,7 +22,7 @@ const Nav = ({ onClose }) => {
                         as={Link} 
                         key={path} 
                         to={path}
-                        color={{base: 'white', md: 'gry'}}
+                        color={{base: 'wht', md: 'gry'}}
                         _hover={{ color: 'grn', textDecoration: 'none'}}
                         _focus={{ outline: 'none' }}
                         fontSize={{base: 'lg', md: 'md'}}

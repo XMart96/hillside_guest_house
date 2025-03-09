@@ -17,7 +17,7 @@ const LowerHeader = () => {
     const isMobile = useBreakpointValue({base: true, md: false});
     
     return (
-        <Box bg='white'>   
+        <Box bg='wht'>   
             <WrapContainer justify='space-between' align='center'>
                 <LogoText />
                 {!isMobile ? <Nav /> : <Drawer />}

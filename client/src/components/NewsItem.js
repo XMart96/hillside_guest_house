@@ -12,7 +12,7 @@ const NewsItem = ({ url, date, imgPath, details, btn }) => {
 
     return (
         <PageElemContainer w='null'>
-            <Card.Root flexDirection={{base: 'column', md: "row"}} overflow="hidden" bg='white' color='gry' border='none'>
+            <Card.Root flexDirection={{base: 'column', md: "row"}} overflow="hidden" bg='wht' color='gry' border='none'>
                 <Skeleton loading={loading}>
                     <Image
                         objectFit="cover"

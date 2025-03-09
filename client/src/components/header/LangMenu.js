@@ -33,12 +33,13 @@ const LangMenu = () => {
             <MenuTrigger asChild>
                 <Button 
                     variant='ghost' 
-                    color='white' 
+                    color='wht' 
                     bg='blu'
                     _hover={{ color: 'grn' }} 
                     _focusVisible={{ outline: 'none' }}
                     display="flex"
                     alignItems="center"
+                    pr={{md: 0}}
                 >
                     <Icon as={LuLanguages} fontSize='20px' />
                     <Text fontSize='md' hideBelow='md'>{t('lang')}</Text>
@@ -55,7 +56,7 @@ const LangMenu = () => {
                                 key={k} 
                                 value={k}
                                 _hover={{color: 'grn'}}
-                                color='white'
+                                color='wht'
                             >
                                 {l}
                             </MenuRadioItem>

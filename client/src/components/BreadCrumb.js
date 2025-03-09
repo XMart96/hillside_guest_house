@@ -9,7 +9,7 @@ const BreadCrumb = ({ path, links }) => {
             to={to} 
             _hover={{ color: 'grn', textDecoration: 'none' }} 
             _focus={{ outline: 'none' }} 
-            color='white' 
+            color='wht' 
             transition="0.2s"
         >
             {label}
@@ -24,7 +24,7 @@ const BreadCrumb = ({ path, links }) => {
                         {renderCrumbLink('/', 'Home')}
                     </Breadcrumb.Link>
                 </Breadcrumb.Item>
-                <Breadcrumb.Separator color='white' />
+                <Breadcrumb.Separator color='wht' />
                 {
                     path.map((value, index) => {
                         const to = `/${value}`;
@@ -37,7 +37,7 @@ const BreadCrumb = ({ path, links }) => {
                                         {renderCrumbLink(to, label)}
                                     </Breadcrumb.Link>
                                 </Breadcrumb.Item>
-                                {index < path.length - 1 && <Breadcrumb.Separator color='white' />}
+                                {index < path.length - 1 && <Breadcrumb.Separator color='wht' />}
                             </React.Fragment>
                         );
                     })

@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import HomePageForm from '@components/HomePageForm';
+import { PageElemContainer } from './layoutElements';
 
 const HomePageBgForm = () => (
     <Box 
@@ -9,20 +10,17 @@ const HomePageBgForm = () => (
         backgroundPosition='center'
         minH='calc(100vh - 128px)'
     >
-        <Box
-            position="absolute"
-            bottom="10"
-            left="50%"
+        <PageElemContainer
+            position='absolute'
+            color='gry'
+            w={{ base: '80%', sm: '70%', md: 'auto' }}
+            bottom='10'
+            left="calc(50% - 12px )"
             transform="translateX(-50%)"
-            bg="white"
-            color="gry"
-            rounded="lg"
-            p="5"
-            w={{ base: '95%', sm: '70%', md: 'auto' }}
-            shadow="0 10px 15px -3px rgba(0, 0, 0, 0.1)"
         >
             <HomePageForm />
-        </Box>
+
+        </PageElemContainer>
     </Box>
 );
 

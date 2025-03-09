@@ -11,7 +11,7 @@ const NewsPage = () => {
     return (
         <Box>
             <HeaderSection bg='/assets/room3/10-min.jpg' />
-            <WrapContainer gap='2' wrap='wrap'>
+            <WrapContainer gap='2' wrap='wrap' justify='center'>
                 <Box flex='1'>
                     { t('news', { returnObjects: true }).slice().reverse().map(i => {
                         return <NewsItem key={i.id} {...i} btn={t('btn')} />
