@@ -6,15 +6,18 @@ export const StepsItem = (props) => {
   return (
     <ChakraSteps.Item {...rest}>
       <ChakraSteps.Trigger>
-        <ChakraSteps.Indicator>
+        <ChakraSteps.Indicator 
+          borderColor={{ base: 'gry', _current: 'grn' }}
+          bg={{ base: 'wht', _complete: 'grn' }}
+        >
           <ChakraSteps.Status
             complete={completedIcon || <LuCheck />}
             incomplete={icon || <ChakraSteps.Number />}
           />
         </ChakraSteps.Indicator>
-        <StepInfo title={title} description={description} />
+        <StepInfo title={title} description={description}/>
       </ChakraSteps.Trigger>
-      <ChakraSteps.Separator />
+      <ChakraSteps.Separator bg={{ base: 'gry', _complete: 'grn' }} />
     </ChakraSteps.Item>
   )
 }
@@ -31,7 +34,7 @@ const StepInfo = (props) => {
   }
   return (
     <>
-      {title && <ChakraSteps.Title>{title}</ChakraSteps.Title>}
+      {title && <ChakraSteps.Title color='gry'>{title}</ChakraSteps.Title>}
       {description && (
         <ChakraSteps.Description>{description}</ChakraSteps.Description>
       )}

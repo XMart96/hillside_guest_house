@@ -13,8 +13,8 @@ import {
     MenuRadioItemGroup,
     MenuRoot,
     MenuTrigger
-} from "@/components/ui/menu";
-import { Button } from "@/components/ui/button";
+} from "@components/ui/menu";
+import { Button } from "@components/ui/button";
 import { LuLanguages } from "react-icons/lu";
 import { Text, Icon } from "@chakra-ui/react";
 import { useTranslation } from 'react-i18next';

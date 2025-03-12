@@ -32,6 +32,7 @@ const SubscribeBox = ({ textColor }) => {
                         {t('subscribeText')}
                     </Field.Label>
                     <Input 
+                        mt='2'
                         type='email' 
                         name='newsletterEmail' 
                         placeholder="email@example.com"
@@ -48,7 +49,7 @@ const SubscribeBox = ({ textColor }) => {
                     />
                     <Field.ErrorText>{errors.newsletterEmail?.message}</Field.ErrorText>
                 </Field.Root>
-                <Btn type="submit" mt='2'>
+                <Btn type="submit" mt='4'>
                     <LuMail /> {t('subscribeButton')}
                 </Btn>
             </form>

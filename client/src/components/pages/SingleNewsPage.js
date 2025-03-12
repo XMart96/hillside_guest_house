@@ -3,7 +3,7 @@ import HeaderSection from '@components/HeaderSection';
 
 const SingleNewsPage = () => (
     <Box>
-        <HeaderSection />
+        <HeaderSection bg='' />
     </Box>
 );
 

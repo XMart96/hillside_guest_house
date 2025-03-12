@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import HeaderSection from "@/components/HeaderSection";
+import HeaderSection from "@components/HeaderSection";
 
 const ServicesPage = () => (
     <Flex direction='column'>

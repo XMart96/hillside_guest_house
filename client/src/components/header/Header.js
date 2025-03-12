@@ -8,8 +8,8 @@
 */
 
 import { Box } from "@chakra-ui/react"
-import UpperHeader from "@/components/header/UpperHeader";
-import LowerHeader from "@/components/header/LowerHeader";
+import UpperHeader from "@header/UpperHeader";
+import LowerHeader from "@header/LowerHeader";
 
 const Header = () => (
     <Box>

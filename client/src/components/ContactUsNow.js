@@ -1,8 +1,8 @@
 import { Flex, Heading, Stack, Text, HStack } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { socialLinks } from '@/data';
-import SocialLinks from '@/components/SocialLinks';
-import { WrapContainer, PageElemContainer } from "@/components/layoutElements";
+import SocialLinks from '@components/SocialLinks';
+import { WrapContainer, PageElemContainer } from "@components/layoutElements";
 
 const ContactUsNow = () => {
     const { t } = useTranslation(['contactInfo']);
@@ -10,7 +10,7 @@ const ContactUsNow = () => {
     return (
         <WrapContainer>
             <PageElemContainer position='relative' h='250px'>
-                <video autoPlay loop muted 
+                <video autoPlay loop muted playsInline
                     style={{ 
                         position: 'absolute',
                         top: 0,
@@ -32,6 +32,7 @@ const ContactUsNow = () => {
                     justify='space-around' 
                     align='center'
                     p='5'
+                    gap='2'
                 >
                     <Stack color='wht'>
                         <Heading size={{base: '2xl', md: '3xl'}}>{t('contactUs')}</Heading>
