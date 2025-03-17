@@ -22,7 +22,7 @@ const BookRoomSelect = () => {
                                         <Skeleton loading={loading}>
                                             <Image
                                                 w='150px'
-                                                src={r.imgPath}
+                                                src={`${r.imgPath}${r.bgImage}`}
                                                 alt={r.details.header}
                                                 onLoad={() => setLoading(false)}
                                             />

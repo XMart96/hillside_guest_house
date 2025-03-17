@@ -7,6 +7,7 @@ const HeaderSection = ({ bg }) => {
     const { t } = useTranslation(['links']);
     const location = useLocation();
     const pathNames = location.pathname.split('/').filter(x => x);
+    const currentPath = pathNames[pathNames.length - 1];
 
     const allLinks = [
         ...t("links", { returnObjects: true }), 
@@ -24,7 +25,7 @@ const HeaderSection = ({ bg }) => {
         align='center'
         >
             <Heading size='4xl' mb='1' color='wht'>
-                {allLinks.find(i => i.path === location.pathname)?.label}
+                {allLinks.find(i => i.path === `/${currentPath}`).label}
             </Heading>
             <BreadCrumb path={pathNames} links={allLinks} />
         </Stack>

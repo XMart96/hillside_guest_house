@@ -28,3 +28,4 @@ Thumbs.db
 
 # Ignore .vscode settings
 .vscode/
+client/.env

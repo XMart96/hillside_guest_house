@@ -6,7 +6,7 @@ import { Skeleton } from '@components/ui/skeleton';
 import { LuArrowRight } from "react-icons/lu";
 import { PageElemContainer } from '@components/layoutElements';
 
-const RoomItem = ({ url, imgPath, price, details, btn }) => {
+const RoomItem = ({ url, imgPath, bgImage, price, details, btn }) => {
     const [loading, setLoading] = useState(true);
 
     return(
@@ -14,7 +14,7 @@ const RoomItem = ({ url, imgPath, price, details, btn }) => {
             <Card.Root maxW='md' overflow="hidden" bg='wht' color='gry' border='none'>
                 <Skeleton loading={loading}>
                     <Image
-                        src={imgPath}
+                        src={`${imgPath}${bgImage}`}
                         alt={details.header}
                         onLoad={() => setLoading(false)}
                     />

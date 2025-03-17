@@ -3,7 +3,14 @@
         {
             "id": 1,
             "url": "room1",
-            "imgPath": "/assets/room1/1-min.jpg",
+            "imgPath": "/assets/room1/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg", "2-min.jpg", "3-min.jpg",
+                "4-min.jpg", "5-min.jpg", "6-min.jpg",
+                "7-min.jpg", "8-min.jpg", "9-min.jpg",
+                "10-min.jpg"
+            ],
             "price": "26000",
             "priceWithBreakfast": "30000",
             "size": "32",
@@ -14,7 +21,14 @@
         {
             "id": 2,
             "url": "room2",
-            "imgPath": "/assets/room2/1-min.jpg",
+            "imgPath": "/assets/room2/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg", "2-min.jpg", "3-min.jpg",
+                "4-min.jpg", "5-min.jpg", "6-min.jpg",
+                "7-min.jpg", "8-min.jpg", "9-min.jpg",
+                "10-min.jpg", "11-min.jpg"
+            ],
             "price": "22000",
             "priceWithBreakfast": "26000",
             "size": "23",
@@ -25,7 +39,14 @@
         {
             "id": 3,
             "url": "room3",
-            "imgPath": "/assets/room3/1-min.jpg",
+            "imgPath": "/assets/room3/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg", "2-min.jpg", "3-min.jpg",
+                "4-min.jpg", "5-min.jpg", "6-min.jpg",
+                "7-min.jpg", "8-min.jpg", "9-min.jpg",
+                "10-min.jpg"
+            ],
             "price": "24000",
             "priceWithBreakfast": "28000",
             "size": "25",
@@ -36,7 +57,14 @@
         {
             "id": 4,
             "url": "room4",
-            "imgPath": "/assets/room4/1-min.jpg",
+            "imgPath": "/assets/room4/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg", "2-min.jpg", "3-min.jpg",
+                "4-min.jpg", "5-min.jpg", "6-min.jpg",
+                "7-min.jpg", "8-min.jpg", "9-min.jpg",
+                "10-min.jpg"
+            ],
             "price": "26000",
             "priceWithBreakfast": "30000",
             "size": "27",

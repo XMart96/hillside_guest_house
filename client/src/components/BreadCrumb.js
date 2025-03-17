@@ -27,8 +27,8 @@ const BreadCrumb = ({ path, links }) => {
                 <Breadcrumb.Separator color='wht' />
                 {
                     path.map((value, index) => {
-                        const to = `/${value}`;
-                        const label = links.find(i => i.path === to)?.label || value;
+                        const to = `/${path.slice(0, index + 1).join('/')}`;
+                        const label = links.find(i => i.path === `/${value}`).label;
 
                         return (
                             <React.Fragment key={index}>
