@@ -11,7 +11,7 @@
 import { Flex } from "@chakra-ui/react";
 
 const UpperFooterItem = ({ children, flex }) => (
-    <Flex direction='column' flex={flex} gap='2' p='5' m='3' maxW={{ base: "300px", md: "100%" }}>
+    <Flex direction='column' flex={flex} gap='2' p='5' m='3' maxW={{ base: "300px", lg: "100%" }}>
         {children}
     </Flex>
 );

@@ -19,7 +19,7 @@ import { WrapContainer } from "@components/layoutElements";
 import { Link } from 'react-router-dom';
 
 const UpperFooter = () => {
-    const { t } = useTranslation(['links', 'contactInfo', 'footer']);
+    const { t } = useTranslation(['links', 'contactInfo', 'footer', 'news', 'rooms']);
 
     return (
         <Box>
@@ -33,19 +33,19 @@ const UpperFooter = () => {
                 <UpperFooterItem flex='1'>
                     <Heading size='xl'>{t('footer:news')}</Heading>
                     {
-                        t('news', {returnObjects: true}).slice().reverse().map((i, k) => (
+                        t('news:news', {returnObjects: true}).slice().reverse().map((i, k) => (
                             <ChakraLink key={k} as={Link} to={`news${i.path}`} color='wht'>
                                 <LuLink /> {i.label}
                             </ChakraLink>
                         ))
                     }
                 </UpperFooterItem>
-                <UpperFooterItem flex='1'>
+                <UpperFooterItem flex='2'>
                     <Heading size='xl'>{t('footer:links')}</Heading>
                     {
-                        t('rooms', {returnObjects: true}).map((i, k) => (
+                        t('rooms:rooms', {returnObjects: true}).map((i, k) => (
                             <ChakraLink key={k} as={Link} to={`rooms${i.path}`} color='wht' whiteSpace='nowrap'>
-                                <LuLink /> {i.label}
+                                <LuLink /> {i.header}
                             </ChakraLink>
                         ))
                     }

@@ -18,7 +18,7 @@ const SingleRoomPage = () => {
     const location = useLocation();
     const pathNames = location.pathname.split('/').filter(x => x);
     const roomPath = pathNames[pathNames.length - 1];
-    const currentRoom = t('rooms', { returnObjects: true }).find(r => r.url === roomPath);
+    const currentRoom = t('rooms', { returnObjects: true }).find(r => r.path === `/${roomPath}`);
     const {imgPath, bgImage, images} = currentRoom;
 
 

@@ -1,10 +1,5 @@
 {
     "rights": "Hillside Guest House © 2025. All rights reserved.",
     "news": "News",
-    "links": "Links",
-    "subscribe": "Subscribe Newsletter",
-    "subscribeText": "Subscribe to our newsletter to receive news and updates about our guesthouse",
-    "subscribeButton": "Subscribe",
-    "inputRequired": "Email is required",
-    "inputError": "Email is not valid"
+    "links": "Links"
 }

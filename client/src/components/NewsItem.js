@@ -5,10 +5,11 @@ import { LuCalendarClock, LuArrowRight } from 'react-icons/lu';
 import { Skeleton } from '@components/ui/skeleton';
 import { useState } from "react";
 import { PageElemContainer } from '@components/layoutElements';
+import { useLocation } from "react-router-dom";
 
-
-const NewsItem = ({ url, date, imgPath, details, btn }) => {
+const NewsItem = ({ date, path, imgPath, bgImage, header, subheader, btn }) => {
     const [loading, setLoading] = useState(true);
+    const location = useLocation();
 
     return (
         <PageElemContainer w='null'>
@@ -24,21 +25,21 @@ const NewsItem = ({ url, date, imgPath, details, btn }) => {
                     <Image
                         objectFit="cover"
                         maxW={{md: "250px"}}
-                        src={imgPath}
-                        alt={details.header}
+                        src={`${imgPath}${bgImage}`}
+                        alt={header}
                         onLoad={() => setLoading(false)}
                     />
                 </Skeleton>
                 <Flex w='100%' direction='column'>
                     <Card.Body gap='3'>
-                        <Card.Title >{details.header}</Card.Title>
-                        <Card.Description>{details.subheader}</Card.Description>
+                        <Card.Title >{header}</Card.Title>
+                        <Card.Description>{subheader}</Card.Description>
                         <HStack >
                             <LuCalendarClock />{date}
                         </HStack>
                     </Card.Body>
                     <Card.Footer justifyContent={{base: 'flex-start', md: 'flex-end'}}>
-                        <ChakraLink as={Link} to={url}>
+                        <ChakraLink as={Link} to={`${location.pathname}${path}`}>
                             <Btn>{btn}<LuArrowRight /></Btn>
                         </ChakraLink>
                     </Card.Footer>

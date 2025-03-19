@@ -20,7 +20,7 @@ import { Text, Icon } from "@chakra-ui/react";
 import { useTranslation } from 'react-i18next';
 
 const LangMenu = () => {
-    const { i18n, t } = useTranslation(['links']);
+    const { i18n, t } = useTranslation(['lang']);
 
     const lang = {
         en: 'English',

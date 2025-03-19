@@ -28,38 +28,5 @@
             "path": "/book",
             "label": "Ամրագրել"
         }
-    ],
-    "rooms": [
-        {
-            "path": "/room1",
-            "label": "Սենյակ 1"
-        },
-        {
-            "path": "/room2",
-            "label": "Սենյակ 2"
-        },
-        {
-            "path": "/room3",
-            "label": "Սենյակ 3"
-        },
-        {
-            "path": "/room4",
-            "label": "Սենյակ 4"
-        }
-    ],
-    "news": [
-        {
-            "path": "/breakfast",
-            "label": "Նախաճաշեր"
-        },
-        {
-            "path": "/mir",
-            "label": "Mir"
-        },
-        {
-            "path": "/discount",
-            "label": "Զեղչեր"
-        }
-    ],
-    "lang": "Լեզու"
+    ]
 }

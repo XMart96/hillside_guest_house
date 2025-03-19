@@ -5,7 +5,7 @@ import SocialLinks from '@components/SocialLinks';
 import { WrapContainer, PageElemContainer } from "@components/layoutElements";
 
 const ContactUsNow = () => {
-    const { t } = useTranslation(['contactInfo']);
+    const { t } = useTranslation(['contactUsNow']);
 
     return (
         <WrapContainer>

@@ -5,9 +5,11 @@ import { useState } from "react";
 import { Skeleton } from '@components/ui/skeleton';
 import { LuArrowRight } from "react-icons/lu";
 import { PageElemContainer } from '@components/layoutElements';
+import { useLocation } from "react-router-dom";
 
-const RoomItem = ({ url, imgPath, bgImage, price, details, btn }) => {
+const RoomItem = ({ path, imgPath, bgImage, price, header, btn }) => {
     const [loading, setLoading] = useState(true);
+    const location = useLocation();
 
     return(
         <PageElemContainer w='null'>
@@ -15,12 +17,12 @@ const RoomItem = ({ url, imgPath, bgImage, price, details, btn }) => {
                 <Skeleton loading={loading}>
                     <Image
                         src={`${imgPath}${bgImage}`}
-                        alt={details.header}
+                        alt={header}
                         onLoad={() => setLoading(false)}
                     />
                 </Skeleton>
                 <Card.Body gap="3">
-                    <Card.Title>{details.header}</Card.Title>
+                    <Card.Title>{header}</Card.Title>
                     <Card.Description>
                         This sofa is perfect for modern tropical spaces, baroque inspired
                         spaces.
@@ -30,7 +32,7 @@ const RoomItem = ({ url, imgPath, bgImage, price, details, btn }) => {
                     </Text>
                 </Card.Body>
                 <Card.Footer>
-                    <ChakraLink as={Link} to={url}>
+                    <ChakraLink as={Link} to={`${location.pathname}${path}`}>
                         <Btn>{btn}<LuArrowRight /></Btn>
                     </ChakraLink>
                 </Card.Footer>

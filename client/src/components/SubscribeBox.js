@@ -24,7 +24,7 @@ const SubscribeBox = ({ textColor }) => {
     });
 
     return (
-        <Flex direction='column' gap='2' maxW={{ base: "300px", md: "100%" }}>
+        <Flex direction='column' gap='2' maxW={{ base: "300px", lg: "100%" }}>
             <Heading color={textColor} size='xl'>{t('footer:subscribe')}</Heading>
             <form onSubmit={onSubmit}>
                 <Field.Root invalid={!!errors.newsletterEmail}>

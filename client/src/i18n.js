@@ -16,7 +16,7 @@ i18n
         backend: {
             loadPath: '/locales/{{lng}}/{{ns}}.json'
         },
-        ns: ['links', 'homePageForm', 'footer', 'contactInfo', 'news', 'rooms']
+        ns: ['contactInfo', 'contactUsNow', 'footer', 'homePageForm', 'lang', 'links', 'news', 'rooms', 'subscribe']
     });
 
 export default i18n;

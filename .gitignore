@@ -14,18 +14,23 @@ client/.env
 server/.env
 
 # Build output
-client/build
-server/dist
+client/build/
+server/dist/
 
 # Testing
-client/coverage
-server/coverage
+client/coverage/
+server/coverage/
 
 # Miscellaneous
 .DS_Store
 *.swp
 Thumbs.db
 
-# Ignore .vscode settings
+# Ignore .vscode and JetBrains IDE settings
 .vscode/
-client/.env
+.idea/
+
+# Other
+.npmrc
+.yarnrc
+.next/
