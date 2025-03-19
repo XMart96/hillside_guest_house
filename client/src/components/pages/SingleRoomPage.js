@@ -46,9 +46,6 @@ const SingleRoomPage = () => {
                 <PageElemContainer>
                     <Box h={{base: '400px', md: '600px', lg: '700px'}} ref={containerRef}></Box>
                     <LightGallery
-                        cssVariables={{
-                            'lg-backdrop-bg': '#fff'
-                        }}
                         onInit={onInit}
                         container={galleryContainer} 
                         plugins={[lgThumbnail]}
