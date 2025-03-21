@@ -13,13 +13,13 @@ const HomePageBgForm = () => (
         <PageElemContainer
             position='absolute'
             color='gry'
-            w={{ base: '80%', sm: '70%', md: 'auto' }}
+            w={{ base: 'inherit', md: '95%' }}
             bottom='10'
             left="calc(50% - 12px )"
             transform="translateX(-50%)"
+            maxW='670px'
         >
             <HomePageForm />
-
         </PageElemContainer>
     </Box>
 );

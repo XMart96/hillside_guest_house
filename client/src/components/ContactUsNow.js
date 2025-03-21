@@ -1,11 +1,22 @@
 import { Flex, Heading, Stack, Text, HStack } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import { socialLinks } from '@/data';
 import SocialLinks from '@components/SocialLinks';
 import { WrapContainer, PageElemContainer } from "@components/layoutElements";
 
 const ContactUsNow = () => {
     const { t } = useTranslation(['contactUsNow']);
+    const phone = process.env.REACT_APP_PHONE;
+
+    const socialLinks = [
+        {
+            name: 'WhatsApp',
+            url: `https://wa.me/${phone.slice(1)}`
+        },
+        {
+            name: 'Telegram',
+            url: 'https://t.me/hillside_guest_house'
+        }
+    ];
 
     return (
         <WrapContainer>

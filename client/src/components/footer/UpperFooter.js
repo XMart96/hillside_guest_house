@@ -9,7 +9,6 @@
 
 import { Box, Heading, Text, Link as ChakraLink } from "@chakra-ui/react";
 import LogoText from "@components/LogoText";
-import { phone, email } from '@/data';
 import { useTranslation } from "react-i18next";
 import ContactLinkItem from "@components/ContactLinkItem";
 import { LuPhone, LuMail, LuLink } from "react-icons/lu";
@@ -20,6 +19,8 @@ import { Link } from 'react-router-dom';
 
 const UpperFooter = () => {
     const { t } = useTranslation(['links', 'contactInfo', 'footer', 'news', 'rooms']);
+    const phone = process.env.REACT_APP_PHONE;
+    const email = process.env.REACT_APP_EMAIL;
 
     return (
         <Box>
@@ -34,7 +35,15 @@ const UpperFooter = () => {
                     <Heading size='xl'>{t('footer:news')}</Heading>
                     {
                         t('news:news', {returnObjects: true}).slice().reverse().map((i, k) => (
-                            <ChakraLink key={k} as={Link} to={`news${i.path}`} color='wht'>
+                            <ChakraLink 
+                                key={k} 
+                                as={Link} 
+                                to={`news${i.path}`} 
+                                color='wht'
+                                _hover={{ color: 'grn', textDecoration: 'none'}} 
+                                _focus={{ outline: 'none' }}
+                                transition='0.2s'
+                            >
                                 <LuLink /> {i.label}
                             </ChakraLink>
                         ))
@@ -44,7 +53,16 @@ const UpperFooter = () => {
                     <Heading size='xl'>{t('footer:links')}</Heading>
                     {
                         t('rooms:rooms', {returnObjects: true}).map((i, k) => (
-                            <ChakraLink key={k} as={Link} to={`rooms${i.path}`} color='wht' whiteSpace='nowrap'>
+                            <ChakraLink 
+                                key={k} 
+                                as={Link} 
+                                to={`rooms${i.path}`} 
+                                color='wht' 
+                                whiteSpace='nowrap'
+                                _hover={{ color: 'grn', textDecoration: 'none'}} 
+                                _focus={{ outline: 'none' }}
+                                transition='0.2s'
+                            >
                                 <LuLink /> {i.header}
                             </ChakraLink>
                         ))

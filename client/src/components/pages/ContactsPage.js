@@ -13,7 +13,6 @@ import HeaderSection from "@components/HeaderSection";
 import YandexMaps from "@components/YandexMaps";
 import { LuClock, LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 import ContactInfoBox from "@components/ContactInfoBox";
-import { phone, email } from "@/data";
 import { useTranslation } from "react-i18next";
 import { 
     WrapContainer, 
@@ -22,6 +21,8 @@ import {
 
 const ContactsPage = () => {
     const { t } = useTranslation(['contactInfo']);
+    const phone = process.env.REACT_APP_PHONE;
+    const email = process.env.REACT_APP_EMAIL;
     
     const iconsInfo = [
         {

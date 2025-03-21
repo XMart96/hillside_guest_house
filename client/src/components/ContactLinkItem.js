@@ -17,7 +17,7 @@ const ContactLinkItem = ({ href, icon, text, hide }) => (
         to={href} 
         color='wht' 
         _hover={{ color: 'grn', textDecoration: 'none'}} 
-        _focus={{outline: 'none'}}
+        _focus={{ outline: 'none' }}
         transition='0.2s'
     >
         <Icon as={icon} fontSize='20px' /> 

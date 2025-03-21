@@ -17,13 +17,13 @@ const BookRoomSelect = () => {
                             <RadioCard.ItemHiddenInput />
                             <RadioCard.ItemControl>
                                 <RadioCard.ItemContent>
-                                    <RadioCard.ItemText>{r.details.header}</RadioCard.ItemText>
+                                    <RadioCard.ItemText>{r.header}</RadioCard.ItemText>
                                     <RadioCard.ItemDescription>
                                         <Skeleton loading={loading}>
                                             <Image
                                                 w='150px'
                                                 src={`${r.imgPath}${r.bgImage}`}
-                                                alt={r.details.header}
+                                                alt={r.header}
                                                 onLoad={() => setLoading(false)}
                                             />
                                         </Skeleton>

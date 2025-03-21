@@ -1,4 +1,4 @@
-import { Card, Image, Text, Link as ChakraLink } from "@chakra-ui/react";
+import { Card, Image, Text, Link as ChakraLink, FormatNumber } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { Btn } from "@components/elements";
 import { useState } from "react";
@@ -7,7 +7,7 @@ import { LuArrowRight } from "react-icons/lu";
 import { PageElemContainer } from '@components/layoutElements';
 import { useLocation } from "react-router-dom";
 
-const RoomItem = ({ path, imgPath, bgImage, price, header, btn }) => {
+const RoomItem = ({ path, imgPath, bgImage, price, header, subheader, btn }) => {
     const [loading, setLoading] = useState(true);
     const location = useLocation();
 
@@ -24,11 +24,16 @@ const RoomItem = ({ path, imgPath, bgImage, price, header, btn }) => {
                 <Card.Body gap="3">
                     <Card.Title>{header}</Card.Title>
                     <Card.Description>
-                        This sofa is perfect for modern tropical spaces, baroque inspired
-                        spaces.
+                        {subheader}
                     </Card.Description>
                     <Text textStyle="2xl" fontWeight="medium" letterSpacing="tight" mt="2">
-                        {price}
+                        <FormatNumber 
+                            value={price} 
+                            style="currency"
+                            currency="AMD" 
+                            maximumFractionDigits={0}
+                            minimumFractionDigits={0}
+                        />
                     </Text>
                 </Card.Body>
                 <Card.Footer>

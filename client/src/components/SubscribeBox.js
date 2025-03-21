@@ -15,7 +15,7 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from "react-i18next";
 
 const SubscribeBox = ({ textColor }) => {
-    const { t } = useTranslation(['footer']);
+    const { t } = useTranslation(['subscribe']);
     const { register, handleSubmit, formState: { errors }, reset } = useForm({ mode: 'onChange' }); 
     
     const onSubmit = handleSubmit(data => {
@@ -25,7 +25,7 @@ const SubscribeBox = ({ textColor }) => {
 
     return (
         <Flex direction='column' gap='2' maxW={{ base: "300px", lg: "100%" }}>
-            <Heading color={textColor} size='xl'>{t('footer:subscribe')}</Heading>
+            <Heading color={textColor} size='xl'>{t('subscribe')}</Heading>
             <form onSubmit={onSubmit}>
                 <Field.Root invalid={!!errors.newsletterEmail}>
                     <Field.Label color={textColor}>

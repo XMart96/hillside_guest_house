@@ -3,7 +3,7 @@ import BookRoomSelect from '@book/BookRoomSelect';
 import { Flex } from "@chakra-ui/react";
 
 const BookContent1 = () => (
-    <Flex gap='10'>
+    <Flex gap='10' wrap='wrap'>
         <BookCalendarForm />
         <BookRoomSelect />
     </Flex>
