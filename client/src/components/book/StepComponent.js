@@ -15,9 +15,9 @@ import BookContent1 from "@book/BookContent1";
 const StepComponent = () => (
     <StepsRoot defaultStep={0} count={3}>
     <StepsList>
-      <StepsItem index={0} completedIcon={<Icon color="wht"><LuCheck /></Icon>} icon={<Icon color="gry"><LuCalendarSearch /></Icon>} title="Calendar" />
-      <StepsItem index={1} completedIcon={<Icon color="wht"><LuCheck /></Icon>} icon={<Icon color="gry"><LuUserPen /></Icon>} title="Information" />
-      <StepsItem index={2} completedIcon={<Icon color="wht"><LuCheck /></Icon>} icon={<Icon color="gry"><LuBanknote /></Icon>} title="Payment" />
+      <StepsItem index={0} completedIcon={<Icon as={LuCheck} color="wht"></Icon>} icon={<Icon as={LuCalendarSearch} color="gry"></Icon>} title="Calendar" />
+      <StepsItem index={1} completedIcon={<Icon as={LuCheck} color="wht"></Icon>} icon={<Icon as={LuUserPen} color="gry"></Icon>} title="Information" />
+      <StepsItem index={2} completedIcon={<Icon as={LuCheck} color="wht"></Icon>} icon={<Icon as={LuBanknote} color="gry"></Icon>} title="Payment" />
     </StepsList>
 
     <StepsContent color='gry' index={0}><BookContent1 /></StepsContent>

@@ -8,7 +8,7 @@ const BookRoomSelect = () => {
     const [loading, setLoading] = useState(true);
 
     return (
-        <Box flex='1'>
+        <Box>
             <RadioCard.Root defaultValue="next" w='100%'>
                 <RadioCard.Label>Select Room</RadioCard.Label>
                 <Stack align="stretch" gap='5'>
