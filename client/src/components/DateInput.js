@@ -9,8 +9,15 @@ import { Tooltip } from '@components/ui/tooltip';
 import { LuCalendarSearch, LuCircleX } from 'react-icons/lu';
 import { Controller } from 'react-hook-form';
 
+import logger from '@/logger';
+
 const DateInput = ({ inputName, control, errors, checkInValue, checkOutValue }) => {
-    const { t } = useTranslation(['initialForm']);
+    const ns = ['initialForm'];
+    const { t, i18n } = useTranslation(ns);
+    ns.forEach(n => !i18n.hasResourceBundle(i18n.language, n) && logger('assert', '104', n));
+
+    !i18n.exists(`initialForm:${inputName}`) && logger('assert', '104' `${inputName}`);
+    !control && logger('assert', '106');
 
     const CustomInput = forwardRef(({ value, onClick, placeholder, onClear, name }, ref) => (
         <InputGroup 

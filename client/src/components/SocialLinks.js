@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
-import { Btn } from '@components/elements';
 import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
+
+import { Btn } from '@components/elements';
 import { Tooltip } from '@components/ui/tooltip';
 
 const SocialLinks = ({ name, url }) => (

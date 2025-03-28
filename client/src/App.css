@@ -1,3 +1,4 @@
+/*** lightgallery styles start ***/
 .lg-backdrop {
     background-color: #fff !important;
 }
@@ -22,3 +23,4 @@
 .lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item {
     cursor: pointer;
 }
+/*** lightgallery styles end ***/

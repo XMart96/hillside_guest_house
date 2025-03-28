@@ -1,17 +1,11 @@
-/*
-*   FileName: YandexMaps.js
-*   Redactor: Visual Studio Code
-*   TabSize: 4
-*   Author: Khachatur Martirosyan
-*   brief: The YandexMaps component renders an interactive map using Yandex Maps API. 
-*   It displays a map with a specified center, zoom level, and a placemark for a given location.
-*/
-
 import { Box } from '@chakra-ui/react';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
+import logger from '@/logger';
+
 const YandexMaps = () => {
     const mapsKey = process.env.REACT_APP_MAPS_KEY;
+    !mapsKey && logger('assert', '101');
 
     return(
         <YMaps query={{ apikey: mapsKey }}>

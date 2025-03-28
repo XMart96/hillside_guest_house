@@ -26,5 +26,4 @@ const config = defineConfig({
 });
 
 const system = createSystem(defaultConfig, config);
-
 export default system;

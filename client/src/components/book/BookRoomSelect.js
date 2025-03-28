@@ -3,9 +3,15 @@ import { Skeleton } from '@components/ui/skeleton';
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
+import logger from "@/logger";
+
 const BookRoomSelect = () => {
-    const { t } = useTranslation(['rooms']);
     const [loading, setLoading] = useState(true);
+
+    const ns = ['rooms'];
+    const { t, i18n } = useTranslation(ns);
+    ns.forEach(n => !i18n.hasResourceBundle(i18n.language, n) && logger('assert', '104', n));
+    !i18n.exists('rooms:rooms') && logger('assert', '104');
 
     return (
         <Box>

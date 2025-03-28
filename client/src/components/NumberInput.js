@@ -5,8 +5,15 @@ import { LuUser } from 'react-icons/lu';
 import { Controller } from 'react-hook-form';
 import { NumberInputRoot, NumberInputField } from '@components/ui/number-input';
 
+import logger from '@/logger';
+
 const NumberInput = ({ inputName, control, errors}) => {
-    const { t } = useTranslation(['initialForm']);
+    const ns = ['initialForm'];
+    const { t, i18n } = useTranslation(ns);
+    ns.forEach(n => !i18n.hasResourceBundle(i18n.language, n) && logger('assert', '104', n));
+
+    !i18n.exists(`initialForm:${inputName}`) && logger('assert', '104' `${inputName}`);
+    !control && logger('assert', '106');
     
     return(
         <Field.Root invalid={!!errors[inputName]} w='80px'>

@@ -1,25 +1,27 @@
-/*
-*   FileName: SubscribeBox.js
-*   Redactor: Visual Studio Code
-*   TabSize: 4
-*   Author: Khachatur Martirosyan
-*   brief: The SubscribeBox component provides a subscription form where users can enter their email 
-*   to receive updates. It uses Chakra UI for styling, react-hook-form for form handling, 
-*   and react-i18next for translations.
-*/
-
 import { Field, Input, Heading, Flex } from "@chakra-ui/react";
-import { Btn } from "@components/elements";
 import { LuMail } from "react-icons/lu";
 import { useForm } from 'react-hook-form';
 import { useTranslation } from "react-i18next";
 
+import { Btn } from "@components/elements";
+import logger from "@/logger";
+
 const SubscribeBox = ({ textColor }) => {
-    const { t } = useTranslation(['subscribe']);
+    const ns = ['subscribe'];
+    const { t, i18n } = useTranslation(ns);
+    ns.forEach(n => !i18n.hasResourceBundle(i18n.language, n) && logger('assert', '104', n));
+
     const { register, handleSubmit, formState: { errors }, reset } = useForm({ mode: 'onChange' }); 
-    
-    const onSubmit = handleSubmit(data => {
-        console.log(data);
+    const onSubmit = handleSubmit(d => {
+        if (!d.newsletterEmail) {
+            logger('error', '202');
+            return;
+        }
+        if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(d.newsletterEmail)) {
+            logger('error', '203');
+            return;
+        }
+        console.log(d);
         reset();
     });
 

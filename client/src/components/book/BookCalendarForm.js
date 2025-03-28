@@ -1,16 +1,21 @@
 import { Flex, Box, DataList } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { useForm } from 'react-hook-form';
-import { Btn } from '@components/elements';
-import { format, parse, differenceInDays } from "date-fns";
+import { format, parse, differenceInDays, isBefore } from "date-fns";
 import { ru, enUS } from "date-fns/locale";
 import { useSelector, useDispatch } from 'react-redux';
+
 import { selectCalendarForm, setFormData } from '../../features/calendarForm/calendarFormSlice';
 import DateInput from '@components/DateInput';
 import NumberInput from '@components/NumberInput';
+import { Btn } from '@components/elements';
+import logger from "@/logger";
 
 const BookCalendarForm = () => {
-    const { i18n, t } = useTranslation(['initialForm']);
+    const ns = ['initialForm'];
+    const { t, i18n } = useTranslation(ns);
+    ns.forEach(n => !i18n.hasResourceBundle(i18n.language, n) && logger('assert', '104', n));
+
     const dispatch = useDispatch();
 
     const initialFormData = useSelector(selectCalendarForm);
@@ -24,6 +29,9 @@ const BookCalendarForm = () => {
             checkOut: storedCheckOut ? parse(storedCheckOut, 'dd-MM-yyyy', new Date()) : null
         }
     });
+
+    !control && logger('assert', '106');
+
     const watchCheckIn = watch("checkIn");
     const watchCheckOut = watch("checkOut");
     const watchAdult = watch("adult");
@@ -63,11 +71,24 @@ const BookCalendarForm = () => {
         differenceInDays(new Date(watchCheckOut), new Date(watchCheckIn)) : 0;
 
     const onSubmit = handleSubmit(data => {
+        const checkInDate = new Date(data.checkIn);
+        const checkOutDate = new Date(data.checkOut);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        if (isBefore(checkOutDate, checkInDate)) {
+            logger('error', '204');
+            return;
+        }
+        if (isBefore(checkInDate, today)) {
+            logger('error', '205');
+            return;
+        }
         const formattedData = {
             ...data,
-            checkIn: format(new Date(data.checkIn), 'dd-MM-yyyy'),
-            checkOut: format(new Date(data.checkOut), 'dd-MM-yyyy')
-        }
+            checkIn: format(checkInDate, 'dd-MM-yyyy'),
+            checkOut: format(checkOutDate, 'dd-MM-yyyy')
+        };
 
         dispatch(setFormData(formattedData));
     });

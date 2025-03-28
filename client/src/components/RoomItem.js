@@ -1,11 +1,11 @@
 import { Card, Image, Text, Link as ChakraLink, FormatNumber } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import { Btn } from "@components/elements";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Skeleton } from '@components/ui/skeleton';
 import { LuArrowRight } from "react-icons/lu";
+
+import { Btn } from "@components/elements";
 import { PageElemContainer } from '@components/layoutElements';
-import { useLocation } from "react-router-dom";
 
 const RoomItem = ({ path, imgPath, bgImage, price, header, subheader, btn }) => {
     const [loading, setLoading] = useState(true);

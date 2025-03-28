@@ -1,21 +1,14 @@
-/*
-*   FileName: Rights.js
-*   Redactor: Visual Studio Code
-*   TabSize: 4
-*   Author: Khachatur Martirosyan
-*   brief: The Rights component displays copyright or legal information in the footer. 
-*   It uses Chakra UI for styling and react-i18next for translations.
-*/
-
 import { Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
-const Rights = () => {
-    const { t } = useTranslation(['footer']);
+import logger from "@/logger";
 
-    return (
-        <Text color='wht'>{t('rights')}</Text>
-    );
+const Rights = () => {
+    const ns = ['footer'];
+    const { t, i18n } = useTranslation(ns);
+    ns.forEach(n => !i18n.hasResourceBundle(i18n.language, n) && logger('assert', '104', n));
+
+    return <Text color='wht'>{t('rights')}</Text>;
 }
 
 export default Rights;

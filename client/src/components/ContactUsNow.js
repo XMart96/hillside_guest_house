@@ -1,11 +1,17 @@
 import { Flex, Heading, Stack, Text, HStack } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
+
 import SocialLinks from '@components/SocialLinks';
 import { WrapContainer, PageElemContainer } from "@components/layoutElements";
+import logger from '@/logger';
 
 const ContactUsNow = () => {
-    const { t } = useTranslation(['contactUsNow']);
+    const ns = ['contactUsNow'];
+    const { t, i18n } = useTranslation(ns);
+    ns.forEach(n => !i18n.hasResourceBundle(i18n.language, n) && logger('assert', '104', n));
+
     const phone = process.env.REACT_APP_PHONE;
+    !phone && logger('assert', '102');
 
     const socialLinks = [
         {

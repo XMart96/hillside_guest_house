@@ -10,6 +10,7 @@ import {
 import { Btn } from '@components/elements';
 import { Group, Icon } from "@chakra-ui/react";
 import { LuCalendarSearch, LuUserPen, LuBanknote, LuCheck } from 'react-icons/lu';
+
 import BookContent1 from "@book/BookContent1";
 
 const StepComponent = () => (

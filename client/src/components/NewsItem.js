@@ -1,11 +1,11 @@
 import { Flex, Card, Image, HStack, Link as ChakraLink } from "@chakra-ui/react";
-import { Link } from 'react-router-dom';
-import { Btn } from '@components/elements';
+import { Link, useLocation } from 'react-router-dom';
 import { LuCalendarClock, LuArrowRight } from 'react-icons/lu';
 import { Skeleton } from '@components/ui/skeleton';
 import { useState } from "react";
+
+import { Btn } from '@components/elements';
 import { PageElemContainer } from '@components/layoutElements';
-import { useLocation } from "react-router-dom";
 
 const NewsItem = ({ date, path, imgPath, bgImage, header, subheader, btn }) => {
     const [loading, setLoading] = useState(true);

@@ -1,22 +1,18 @@
-/*
-*   FileName: UpperHeader.js
-*   Redactor: Visual Studio Code
-*   TabSize: 4
-*   Author: Khachatur Martirosyan
-*   brief: The UpperHeader component displays the contact information and social media links in the upper header.
-*   It includes phone, email, Instagram, and a language menu.
-*/
-
 import { Box, HStack, IconButton } from "@chakra-ui/react";
 import { LuPhone, LuMail, LuInstagram } from "react-icons/lu";
+
 import ContactLinkItem from "@components/ContactLinkItem";
 import LangMenu from "@header/LangMenu";
 import { WrapContainer } from "@components/layoutElements";
+import logger from "@/logger";
 
 const UpperHeader = () => {
     const phone = process.env.REACT_APP_PHONE;
+    !phone && logger('assert', '102');
     const email = process.env.REACT_APP_EMAIL;
+    !email && logger('assert', '103');
     const instaURL = process.env.REACT_APP_INSTAGRAM_URL;
+    !instaURL && logger('assert', '105');
 
     return(
         <Box bg="blu">
