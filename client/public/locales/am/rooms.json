@@ -1,0 +1,102 @@
+{
+    "rooms": [
+        {
+            "id": 1,
+            "path": "/room1",
+            "label": "Սենյակ 1",
+            "imgPath": "/assets/room1/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg",
+                "2-min.jpg",
+                "3-min.jpg",
+                "4-min.jpg",
+                "5-min.jpg",
+                "6-min.jpg",
+                "7-min.jpg",
+                "8-min.jpg",
+                "9-min.jpg",
+                "10-min.jpg"
+            ],
+            "price": "26000",
+            "priceWithBreakfast": "30000",
+            "size": "32",
+            "header": "Երկտեղանոց Սենյակ DELUX",
+            "texts": []
+        },
+        {
+            "id": 2,
+            "path": "/room2",
+            "label": "Սենյակ 2",
+            "imgPath": "/assets/room2/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg",
+                "2-min.jpg",
+                "3-min.jpg",
+                "4-min.jpg",
+                "5-min.jpg",
+                "6-min.jpg",
+                "7-min.jpg",
+                "8-min.jpg",
+                "9-min.jpg",
+                "10-min.jpg",
+                "11-min.jpg"
+            ],
+            "price": "22000",
+            "priceWithBreakfast": "26000",
+            "size": "23",
+            "header": "Երկտեղանոց Սենյակ STANDART",
+            "texts": []
+        },
+        {
+            "id": 3,
+            "path": "/room3",
+            "label": "Սենյակ 3",
+            "imgPath": "/assets/room3/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg",
+                "2-min.jpg",
+                "3-min.jpg",
+                "4-min.jpg",
+                "5-min.jpg",
+                "6-min.jpg",
+                "7-min.jpg",
+                "8-min.jpg",
+                "9-min.jpg",
+                "10-min.jpg"
+            ],
+            "price": "24000",
+            "priceWithBreakfast": "28000",
+            "size": "25",
+            "header": "Երկտեղանոց Սենյակ COMFORT",
+            "texts": []
+        },
+        {
+            "id": 4,
+            "path": "/room4",
+            "label": "Սենյակ 4",
+            "imgPath": "/assets/room4/",
+            "bgImage": "1-min.jpg",
+            "images": [
+                "1-min.jpg",
+                "2-min.jpg",
+                "3-min.jpg",
+                "4-min.jpg",
+                "5-min.jpg",
+                "6-min.jpg",
+                "7-min.jpg",
+                "8-min.jpg",
+                "9-min.jpg",
+                "10-min.jpg"
+            ],
+            "price": "26000",
+            "priceWithBreakfast": "30000",
+            "size": "27",
+            "header": "Երկտեղանոց Սենյակ SUPERIOR",
+            "texts": []
+        }
+    ],
+    "btn": "Մանրամասն"
+}

@@ -20,7 +20,16 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true
+        "noUncheckedSideEffectImports": true,
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@chakra/*": ["src/components/ui/*"],
+            "@pages/*": ["src/pages/*"],
+            "@header/*": ["src/components/header/*"],
+            "@footer/*": ["src/components/footer/*"]
+        }
     },
     "include": ["src"]
 }

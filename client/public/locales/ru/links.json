@@ -1,0 +1,32 @@
+{
+    "links": [
+        {
+            "path": "/",
+            "label": "Главная"
+        },
+        {
+            "path": "/about",
+            "label": "О Нас"
+        },
+        {
+            "path": "/rooms",
+            "label": "Номера"
+        },
+        {
+            "path": "/services",
+            "label": "Услуги"
+        },
+        {
+            "path": "/news",
+            "label": "Новости"
+        },
+        {
+            "path": "/contacts",
+            "label": "Контакты"
+        },
+        {
+            "path": "/book",
+            "label": "Бронировать"
+        }
+    ]
+}

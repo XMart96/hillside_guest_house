@@ -1,5 +1,3 @@
-function App() {
-    return <></>;
-}
+import { RoutesComponent } from '@components/RoutesComponent';
 
-export default App;
+export const App = () => <RoutesComponent />;

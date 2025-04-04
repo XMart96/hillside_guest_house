@@ -1,0 +1,32 @@
+{
+    "links": [
+        {
+            "path": "/",
+            "label": "Գլխավոր"
+        },
+        {
+            "path": "/about",
+            "label": "Մեր Մասին"
+        },
+        {
+            "path": "/rooms",
+            "label": "Սենյակներ"
+        },
+        {
+            "path": "/services",
+            "label": "Ծառայություններ"
+        },
+        {
+            "path": "/news",
+            "label": "Նորություններ"
+        },
+        {
+            "path": "/contacts",
+            "label": "Կոնտակտներ"
+        },
+        {
+            "path": "/book",
+            "label": "Ամրագրել"
+        }
+    ]
+}

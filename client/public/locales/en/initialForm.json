@@ -1,0 +1,13 @@
+{
+    "checkIn": "Check In",
+    "checkOut": "Check Out",
+    "adult": "Adult",
+    "button": "Check Availability",
+    "requiredCheckIn": "Check In date is required",
+    "requiredCheckOut": "Check Out date is required",
+    "requiredAdult": "Adult count is required",
+    "errorMinAdult": "The number of adults should not be less than 1",
+    "errorMaxAdult": "The number of adults should not be more than 8",
+    "closeTooltip": "Clear field",
+    "minStay": "Minimum stay 2 days"
+}
