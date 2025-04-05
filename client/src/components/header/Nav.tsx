@@ -1,11 +1,19 @@
 import { Stack } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import { NavLinkItem } from '@components/NavLinkItem';
-import { DrawerTriggerProps, NavItems } from '@/types';
+import { NavLinkItem } from '@components/LinkItems';
+import { JSX } from 'react';
 
-export const Nav = ({ onClose }: DrawerTriggerProps) => {
+interface IDrawerTriggerProps {
+    onClose?: () => void;
+}
+export const Nav = ({ onClose }: IDrawerTriggerProps): JSX.Element => {
     const ns = ['links'];
     const { t } = useTranslation(ns);
+
+    type NavItems = {
+        path: string;
+        label: string;
+    };
     const links: NavItems[] = t('links', { returnObjects: true }) as NavItems[];
 
     return (

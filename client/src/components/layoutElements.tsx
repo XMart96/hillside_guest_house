@@ -1,8 +1,12 @@
-import { PropsWithChildren } from 'react';
+import { JSX, ReactNode } from 'react';
 import { Flex } from '@chakra-ui/react';
-import { FooterItemContainerProps } from '@/types';
 
-export const HeaderWrapperContainer = ({ children }: PropsWithChildren) => (
+interface IHeaderWrapperContainerProps {
+    children: ReactNode;
+}
+export const HeaderWrapperContainer = ({
+    children,
+}: IHeaderWrapperContainerProps): JSX.Element => (
     <Flex
         maxW='1100px'
         w='100%'
@@ -16,7 +20,12 @@ export const HeaderWrapperContainer = ({ children }: PropsWithChildren) => (
     </Flex>
 );
 
-export const FooterWrapperContainer = ({ children }: PropsWithChildren) => (
+interface IFooterWrapperContainerProps {
+    children: ReactNode;
+}
+export const FooterWrapperContainer = ({
+    children,
+}: IFooterWrapperContainerProps): JSX.Element => (
     <Flex
         maxW='1100px'
         w='100%'
@@ -33,10 +42,14 @@ export const FooterWrapperContainer = ({ children }: PropsWithChildren) => (
     </Flex>
 );
 
+interface IFooterItemContainerProps {
+    children: ReactNode;
+    flex?: string;
+}
 export const FooterItemContainer = ({
     children,
     flex,
-}: FooterItemContainerProps) => (
+}: IFooterItemContainerProps): JSX.Element => (
     <Flex
         direction='column'
         flex={flex}

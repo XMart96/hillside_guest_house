@@ -1,7 +1,14 @@
-import { ButtonItemProps } from '@/types';
 import { Button } from '@chakra-ui/react';
+import { JSX, ReactNode } from 'react';
 
-export const SubmitButton = ({ children, type }: ButtonItemProps) => (
+interface IButtonItemProps {
+    children: ReactNode;
+    type?: 'submit';
+}
+export const SubmitButton = ({
+    children,
+    type,
+}: IButtonItemProps): JSX.Element => (
     <Button
         bg='grn'
         color='wht'

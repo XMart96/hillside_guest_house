@@ -1,4 +1,11 @@
-export const data = {
+type dataType = {
+    phone: string;
+    email: string;
+    instagramUrl: string;
+    videoUrl: string;
+};
+
+export const data: dataType = {
     phone: '+37444290127',
     email: 'info@hillside.am',
     instagramUrl: 'https://www.instagram.com/hillside.guest.house/',

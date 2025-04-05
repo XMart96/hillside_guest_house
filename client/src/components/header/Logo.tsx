@@ -1,8 +1,11 @@
-import { DrawerTriggerProps } from '@/types';
 import { Link as ChakraLink, Image } from '@chakra-ui/react';
+import { JSX } from 'react';
 import { Link as RouterLink } from 'react-router';
 
-export const Logo = ({ onClose }: DrawerTriggerProps) => (
+interface ILogoProps {
+    onClose?: () => void;
+}
+export const Logo = ({ onClose }: ILogoProps): JSX.Element => (
     <ChakraLink asChild _focus={{ outline: 'none' }} display='block'>
         <RouterLink to='/'>
             <Image

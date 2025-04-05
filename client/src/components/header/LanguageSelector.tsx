@@ -1,14 +1,18 @@
 import { Menu, Portal, Text, Icon, Button } from '@chakra-ui/react';
+import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LuLanguages } from 'react-icons/lu';
 
-const lang = {
+type langType = {
+    [key: string]: string;
+};
+const lang: langType = {
     en: 'English',
     ru: 'Русский',
     am: 'Հայերեն',
 };
 
-export const LanguageSelector = () => {
+export const LanguageSelector = (): JSX.Element => {
     const ns = ['lang'];
     const { i18n, t } = useTranslation(ns);
     return (

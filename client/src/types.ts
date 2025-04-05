@@ -1,48 +1,4 @@
-import { ReactNode } from 'react';
-import { UseFormRegister } from 'react-hook-form';
-import { IconType } from 'react-icons';
-
-export type LinkItemProps = {
-    icon?: IconType;
-    disableHideIcon?: boolean;
-    url: string;
-    text: string;
-};
-
-export type NavItems = {
-    path: string;
-    label: string;
-};
-
-export type NavLinkItemProps = {
-    path: string;
-    label: string;
-    onClose?: () => void;
-};
-
-export type DrawerTriggerProps = {
-    onClose?: () => void;
-};
-
-export type FooterItemContainerProps = {
-    children: ReactNode;
-    flex?: string;
-};
-
-export type RoomItems = {
-    path: string;
-    header: string;
-};
-
-export type NewsItems = {
-    path: string;
-    label: string;
-};
-
-export type ButtonItemProps = {
-    children: ReactNode;
-    type?: 'submit';
-};
+import { Control, FormState, UseFormRegister } from 'react-hook-form';
 
 export interface INewsletterFormValues {
     newsletterEmail: string;
@@ -50,6 +6,43 @@ export interface INewsletterFormValues {
 
 export type NewsletterInputProps = {
     register: UseFormRegister<INewsletterFormValues>;
+    errors: FormState<INewsletterFormValues>['errors'];
+    name: keyof INewsletterFormValues;
+    labelText: string;
     requiredText: string;
     errorText: string;
 };
+
+export interface IDateInputFormValues {
+    checkIn: Date | null;
+    checkOut: Date | null;
+}
+
+export type DateInputProps = {
+    control: Control<IHomePageFormValues>;
+    errors: FormState<IHomePageFormValues>['errors'];
+    name: keyof IDateInputFormValues;
+    formValues: IDateInputFormValues;
+    labelText: string;
+    requiredText: string;
+    stayText: string;
+    tooltipText: string;
+};
+
+export interface INumberFormValues {
+    adult: string;
+}
+
+export type NumberInputProps = {
+    control: Control<IHomePageFormValues>;
+    errors: FormState<IHomePageFormValues>['errors'];
+    name: keyof INumberFormValues;
+    labelText: string;
+    requiredText: string;
+    errorMinText: string;
+    errorMaxText: string;
+};
+
+export interface IHomePageFormValues
+    extends IDateInputFormValues,
+        INumberFormValues {}

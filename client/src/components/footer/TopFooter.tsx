@@ -4,20 +4,30 @@ import {
     FooterWrapperContainer,
 } from '@components/layoutElements';
 import { LogoText } from '@components/LogoText';
-import { LinkItem } from '@components/LinkItem';
+import { LinkItem } from '@components/LinkItems';
 import { data } from '@/data';
 import { LuPhone, LuMail, LuLink } from 'react-icons/lu';
 import { useTranslation } from 'react-i18next';
-import { RoomItems, NewsItems } from '@/types';
 import { SubscribeBox } from '@components/SubscribeBox';
+import { JSX } from 'react';
 
-export const TopFooter = () => {
+export const TopFooter = (): JSX.Element => {
     const { phone, email } = data;
     const ns = ['links', 'contactInfo', 'footer', 'news', 'rooms'];
     const { t } = useTranslation(ns);
+
+    type RoomItems = {
+        path: string;
+        header: string;
+    };
     const rooms: RoomItems[] = t('rooms:rooms', {
         returnObjects: true,
     }) as RoomItems[];
+
+    type NewsItems = {
+        path: string;
+        label: string;
+    };
     const news: NewsItems[] = t('news:news', {
         returnObjects: true,
     }) as NewsItems[];
@@ -43,7 +53,7 @@ export const TopFooter = () => {
                 </FooterItemContainer>
                 <FooterItemContainer flex='1'>
                     <Heading size='xl'>{t('footer:news')}</Heading>
-                    {news.map(({ path, label }) => (
+                    {news.reverse().map(({ path, label }) => (
                         <LinkItem
                             key={path}
                             url={`news${path}`}

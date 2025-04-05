@@ -1,11 +1,12 @@
 import { Box, HStack } from '@chakra-ui/react';
 import { HeaderWrapperContainer } from '@components/layoutElements';
-import { LinkItem } from '@components/LinkItem';
+import { LinkItem } from '@components/LinkItems';
 import { data } from '@/data';
 import { LuInstagram, LuMail, LuPhone } from 'react-icons/lu';
 import { LanguageSelector } from '@header/LanguageSelector';
+import { JSX } from 'react';
 
-export const TopHeader = () => {
+export const TopHeader = (): JSX.Element => {
     const { phone, email, instagramUrl } = data;
 
     return (
