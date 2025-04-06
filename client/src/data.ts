@@ -3,6 +3,8 @@ type dataType = {
     email: string;
     instagramUrl: string;
     videoUrl: string;
+    telegram: string;
+    whatsApp: string;
 };
 
 export const data: dataType = {
@@ -10,4 +12,6 @@ export const data: dataType = {
     email: 'info@hillside.am',
     instagramUrl: 'https://www.instagram.com/hillside.guest.house/',
     videoUrl: 'https://www.youtube.com/embed/W18K8XkTqz0?si=i1BxDHDJExX9IZlp',
+    telegram: 'https://t.me/hillside_guest_house',
+    whatsApp: 'https://wa.me/37444290127',
 };

@@ -1,7 +1,7 @@
 import { IHomePageFormValues } from '@/types';
 import { Flex } from '@chakra-ui/react';
 import { DateInput, NumberInput } from '@components/InputItems';
-import { SubmitButton } from '@components/ButtonItems';
+import { Btn } from '@components/ButtonItems';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { JSX } from 'react';
@@ -40,7 +40,7 @@ export const HomePageForm = (): JSX.Element => {
             maxW='700px'
             p='5'
             m='3'
-            shadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+            shadow='0 10px 20px 7px rgba(0, 0, 0, 0.1)'
             rounded='lg'
         >
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -78,7 +78,7 @@ export const HomePageForm = (): JSX.Element => {
                         errorMinText={t('errorMinAdult')}
                         errorMaxText={t('errorMaxAdult')}
                     />
-                    <SubmitButton type='submit'>{t('button')}</SubmitButton>
+                    <Btn type='submit'>{t('button')}</Btn>
                 </Flex>
             </form>
         </Flex>

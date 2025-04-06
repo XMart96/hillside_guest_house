@@ -41,13 +41,13 @@ export const TopFooter = (): JSX.Element => {
                         url={`tel:${phone}`}
                         text={phone}
                         icon={LuPhone}
-                        disableHideIcon
+                        disableHideText
                     />
                     <LinkItem
                         url={`mailto:${email}`}
                         icon={LuMail}
                         text={email}
-                        disableHideIcon
+                        disableHideText
                     />
                     <Text>{t('contactInfo:addressText')}</Text>
                 </FooterItemContainer>
@@ -59,7 +59,7 @@ export const TopFooter = (): JSX.Element => {
                             url={`news${path}`}
                             icon={LuLink}
                             text={label}
-                            disableHideIcon
+                            disableHideText
                         />
                     ))}
                 </FooterItemContainer>
@@ -71,12 +71,12 @@ export const TopFooter = (): JSX.Element => {
                             url={`rooms${path}`}
                             icon={LuLink}
                             text={header}
-                            disableHideIcon
+                            disableHideText
                         />
                     ))}
                 </FooterItemContainer>
                 <FooterItemContainer flex='2'>
-                    <SubscribeBox />
+                    <SubscribeBox color='wth' />
                 </FooterItemContainer>
             </FooterWrapperContainer>
         </Box>

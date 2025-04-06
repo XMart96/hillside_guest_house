@@ -1,13 +1,16 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, Box } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { SubmitButton } from '@components/ButtonItems';
+import { Btn } from '@components/ButtonItems';
 import { LuMail } from 'react-icons/lu';
 import { NewsletterInput } from '@components/InputItems';
 import { INewsletterFormValues } from '@/types';
 import { JSX } from 'react';
 
-export const SubscribeBox = (): JSX.Element => {
+interface ISubscribeBoxProps {
+    color: string;
+}
+export const SubscribeBox = ({ color }: ISubscribeBoxProps): JSX.Element => {
     const ns = ['subscribe'];
     const { t } = useTranslation(ns);
 
@@ -34,8 +37,8 @@ export const SubscribeBox = (): JSX.Element => {
     };
 
     return (
-        <>
-            <Heading>{t('subscribe')}</Heading>
+        <Box maxW='300px' color={color}>
+            <Heading mb='3'>{t('subscribe')}</Heading>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <NewsletterInput
                     register={register}
@@ -45,10 +48,10 @@ export const SubscribeBox = (): JSX.Element => {
                     requiredText={t('inputRequired')}
                     errorText={t('inputError')}
                 />
-                <SubmitButton type='submit'>
+                <Btn type='submit'>
                     <LuMail /> {t('subscribeButton')}
-                </SubmitButton>
+                </Btn>
             </form>
-        </>
+        </Box>
     );
 };

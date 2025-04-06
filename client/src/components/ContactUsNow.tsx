@@ -1,0 +1,49 @@
+import { useTranslation } from 'react-i18next';
+import {
+    ContactUsNowContainer,
+    ContactUsNowItemContainer,
+} from '@components/layoutElements';
+import { Box, Stack, Heading, Text, HStack } from '@chakra-ui/react';
+import { data } from '@/data';
+import { SocialLinkItem } from '@components/LinkItems';
+
+export const ContactUsNow = () => {
+    const ns = ['contactUsNow'];
+    const { t } = useTranslation(ns);
+    const { telegram, whatsApp } = data;
+
+    return (
+        <ContactUsNowContainer>
+            <Box position='relative' h='250px' w='100%' my='5'>
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        height: 'inherit',
+                        width: '100%',
+                        objectFit: 'cover',
+                    }}
+                >
+                    <source src='/assets/other/aygestan.mp4' type='video/mp4' />
+                </video>
+                <ContactUsNowItemContainer>
+                    <Stack color='wht'>
+                        <Heading size={{ base: '2xl', md: '3xl' }}>
+                            {t('contactUs')}
+                        </Heading>
+                        <Text>{t('contactUsText')}</Text>
+                    </Stack>
+                    <HStack gap='3'>
+                        <SocialLinkItem name='Telegram' url={telegram} />
+                        <SocialLinkItem name='WhatsApp' url={whatsApp} />
+                    </HStack>
+                </ContactUsNowItemContainer>
+            </Box>
+        </ContactUsNowContainer>
+    );
+};

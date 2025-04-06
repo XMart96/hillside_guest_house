@@ -5,10 +5,7 @@ interface IButtonItemProps {
     children: ReactNode;
     type?: 'submit';
 }
-export const SubmitButton = ({
-    children,
-    type,
-}: IButtonItemProps): JSX.Element => (
+export const Btn = ({ children, type }: IButtonItemProps): JSX.Element => (
     <Button
         bg='grn'
         color='wht'

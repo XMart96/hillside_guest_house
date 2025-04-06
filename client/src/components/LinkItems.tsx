@@ -1,7 +1,10 @@
 import { Link as ChakraLink, Icon, Text } from '@chakra-ui/react';
+import { Tooltip } from '@chakra/tooltip';
 import { JSX } from 'react';
 import { IconType } from 'react-icons';
+import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router';
+import { Btn } from '@components/ButtonItems';
 
 interface INavLinkItemProps {
     path: string;
@@ -30,13 +33,13 @@ export const NavLinkItem = ({
 
 interface ILinkItemProps {
     icon?: IconType;
-    disableHideIcon?: boolean;
+    disableHideText?: boolean;
     url: string;
     text: string;
 }
 export const LinkItem = ({
     icon,
-    disableHideIcon,
+    disableHideText,
     url,
     text,
 }: ILinkItemProps): JSX.Element => (
@@ -49,7 +52,73 @@ export const LinkItem = ({
     >
         <RouterLink to={url}>
             {icon && <Icon as={icon} fontSize='20px' />}
-            <Text hideBelow={disableHideIcon ? '' : 'md'}>{text}</Text>
+            <Text hideBelow={disableHideText ? '' : 'md'}>{text}</Text>
+        </RouterLink>
+    </ChakraLink>
+);
+
+interface IContactsItemsProps {
+    url: string;
+    text: string;
+}
+export const ContactsLinkItem = ({
+    url,
+    text,
+}: IContactsItemsProps): JSX.Element => (
+    <ChakraLink
+        asChild
+        color='gry'
+        _hover={{ color: 'grn', textDecoration: 'none' }}
+        _focus={{ outline: 'none' }}
+        transition='0.2s'
+    >
+        <RouterLink to={url}>
+            <Text>{text}</Text>
+        </RouterLink>
+    </ChakraLink>
+);
+
+interface ISocialLinkItemProps {
+    name: string;
+    url: string;
+}
+export const SocialLinkItem = ({
+    name,
+    url,
+}: ISocialLinkItemProps): JSX.Element => (
+    <Tooltip showArrow content={name}>
+        <ChakraLink asChild>
+            <RouterLink to={url}>
+                <Btn>
+                    {name === 'WhatsApp' ? (
+                        <FaWhatsapp />
+                    ) : name === 'Telegram' ? (
+                        <FaTelegram />
+                    ) : (
+                        ''
+                    )}
+                </Btn>
+            </RouterLink>
+        </ChakraLink>
+    </Tooltip>
+);
+
+interface IButtonLinkItemProps {
+    icon?: IconType;
+    text: string;
+    url: string;
+}
+export const ButtonLinkItem = ({
+    icon,
+    text,
+    url,
+}: IButtonLinkItemProps): JSX.Element => (
+    <ChakraLink asChild _hover={{ textDecoration: 'none' }}>
+        <RouterLink to={url}>
+            <Btn>
+                <Text>{text}</Text>
+                {icon && <Icon as={icon} fontSize='20px' />}
+            </Btn>
         </RouterLink>
     </ChakraLink>
 );

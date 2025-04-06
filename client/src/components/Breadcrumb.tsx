@@ -14,7 +14,7 @@ export const Breadcrumb = ({
         <ChakraBreadcrumb.List>
             <ChakraBreadcrumb.Item>
                 <ChakraBreadcrumb.Link asChild>
-                    <LinkItem url='/' text='Home' />
+                    <LinkItem url='/' text='Home' disableHideText />
                 </ChakraBreadcrumb.Link>
             </ChakraBreadcrumb.Item>
             <ChakraBreadcrumb.Separator color='wht' />
@@ -26,7 +26,11 @@ export const Breadcrumb = ({
                     <React.Fragment key={to}>
                         <ChakraBreadcrumb.Item>
                             <ChakraBreadcrumb.Link asChild>
-                                <LinkItem url={to} text={text} />
+                                <LinkItem
+                                    url={to}
+                                    text={text}
+                                    disableHideText
+                                />
                             </ChakraBreadcrumb.Link>
                         </ChakraBreadcrumb.Item>
                         {index < pathNames.length - 1 && (

@@ -20,10 +20,10 @@ export const RoutesComponent = (): JSX.Element => (
                 <Route index element={<HomePage />} />
                 <Route path='about' element={<AboutPage />} />
                 <Route path='rooms' element={<RoomsPage />} />
-                <Route path='rooms/:id' element={<SingleRoomPage />} />
+                <Route path='rooms/:slug' element={<SingleRoomPage />} />
                 <Route path='services' element={<ServicesPage />} />
                 <Route path='news' element={<NewsPage />} />
-                <Route path='news/:id' element={<SingleNewsPage />} />
+                <Route path='news/:slug' element={<SingleNewsPage />} />
                 <Route path='contacts' element={<ContactsPage />} />
                 <Route path='book' element={<BookPage />} />
                 <Route path='*' element={<NotFoundPage />} />

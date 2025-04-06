@@ -1,1 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Noto+Sans&family=Noto+Serif&display=swap');
+/*** lightgallery styles start ***/
+.lg-backdrop {
+    background-color: #fff !important;
+}
+.lg-outer .lg-thumb-outer {
+    background-color: #fff !important;
+}
+.lg-prev,
+.lg-next {
+    color: #fff !important;
+}
+.lg-counter {
+    color: #636a76 !important;
+}
+.lg-toolbar .lg-icon {
+    color: #636a76 !important;
+}
+.lg-outer .lg-thumb-item.active {
+    border-color: #fff !important;
+}
+.lg-outer .lg-thumb-item:hover {
+    border-color: #fff !important;
+}
+.lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item {
+    cursor: pointer;
+}
+/*** lightgallery styles end ***/
