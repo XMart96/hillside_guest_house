@@ -110,8 +110,11 @@ export const DateInput = ({
     stayText,
     tooltipText,
 }: DateInputProps): JSX.Element => (
-    <Field.Root invalid={!!errors[name]}>
-        <Field.Label>{labelText}</Field.Label>
+    <Field.Root invalid={!!errors[name]} alignItems='stretch' required>
+        <Field.Label>
+            {labelText}
+            <Field.RequiredIndicator />
+        </Field.Label>
         <Controller
             control={control}
             name={name}
@@ -180,8 +183,11 @@ export const NumberInput = ({
     errorMinText,
     errorMaxText,
 }: NumberInputProps): JSX.Element => (
-    <Field.Root invalid={!!errors[name]} w='85px'>
-        <Field.Label>{labelText}</Field.Label>
+    <Field.Root invalid={!!errors[name]} w='85px' required>
+        <Field.Label>
+            {labelText}
+            <Field.RequiredIndicator />
+        </Field.Label>
         <Controller
             control={control}
             name={name}

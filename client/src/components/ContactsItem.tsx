@@ -1,4 +1,4 @@
-import { ContactsItemContainer } from '@components/layoutElements';
+import { ContactsSectionContainer } from '@components/layoutElements';
 import { Icon, Heading, Text } from '@chakra-ui/react';
 import { ContactsLinkItem } from './LinkItems';
 import { IconType } from 'react-icons';
@@ -18,7 +18,7 @@ export const ContactsItem = ({
     type,
     link,
 }: IContactsItemProps): JSX.Element => (
-    <ContactsItemContainer>
+    <ContactsSectionContainer>
         <Icon as={icon} color='grn' fontSize='40px' />
         <Heading size='lg'>{header}</Heading>
         {link ? (
@@ -29,5 +29,5 @@ export const ContactsItem = ({
         ) : (
             <Text textAlign='center'>{label}</Text>
         )}
-    </ContactsItemContainer>
+    </ContactsSectionContainer>
 );

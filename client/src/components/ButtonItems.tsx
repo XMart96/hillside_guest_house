@@ -5,7 +5,11 @@ interface IButtonItemProps {
     children: ReactNode;
     type?: 'submit';
 }
-export const Btn = ({ children, type }: IButtonItemProps): JSX.Element => (
+export const Btn = ({
+    children,
+    type,
+    ...props
+}: IButtonItemProps): JSX.Element => (
     <Button
         bg='grn'
         color='wht'
@@ -13,7 +17,31 @@ export const Btn = ({ children, type }: IButtonItemProps): JSX.Element => (
         transition='0.2s'
         variant='ghost'
         type={type}
-        mt='4'
+        {...props}
+    >
+        {children}
+    </Button>
+);
+
+interface IBtnOutlineProps {
+    children: ReactNode;
+    color: string;
+    hideFrom?: string;
+}
+export const BtnOutline = ({
+    children,
+    color,
+    hideFrom,
+    ...props
+}: IBtnOutlineProps): JSX.Element => (
+    <Button
+        bg='transparent'
+        _hover={{ color: 'grn' }}
+        transition='0.2s'
+        variant='ghost'
+        color={color}
+        hideFrom={hideFrom}
+        {...props}
     >
         {children}
     </Button>

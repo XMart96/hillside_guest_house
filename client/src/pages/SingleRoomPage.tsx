@@ -4,8 +4,8 @@ import { BreadcrumbSection } from '@/components/BreadcrumbSection';
 import { useParams } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import {
-    NewsItemContainer,
-    PageElemContainer,
+    SingleRoomItemContainer,
+    PageSectionContainer,
 } from '@/components/layoutElements';
 import LightGallery from 'lightgallery/react';
 import { LightGallery as ILightGallery } from 'lightgallery/lightgallery';
@@ -58,8 +58,8 @@ export const SingleRoomPage = (): JSX.Element => {
     return (
         <Flex direction='column'>
             <BreadcrumbSection bg={`${imgPath}${bgImage}`} />
-            <NewsItemContainer>
-                <PageElemContainer>
+            <SingleRoomItemContainer>
+                <PageSectionContainer>
                     <Box
                         h={{ base: '400px', md: '600px', lg: '700px' }}
                         ref={containerRef}
@@ -133,8 +133,8 @@ export const SingleRoomPage = (): JSX.Element => {
                             </List.Item>
                         ))}
                     </List.Root>
-                </PageElemContainer>
-            </NewsItemContainer>
+                </PageSectionContainer>
+            </SingleRoomItemContainer>
         </Flex>
     );
 };

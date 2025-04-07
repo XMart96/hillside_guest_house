@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { HomePageForm } from '@components/HomePageForm';
 import { JSX } from 'react';
+import { HomePageFormContainer } from '@components/layoutElements';
 
 export const HomePageBg = (): JSX.Element => (
     <Box
@@ -10,6 +11,8 @@ export const HomePageBg = (): JSX.Element => (
         backgroundPosition='center'
         minH='calc(100vh - 128px)'
     >
-        <HomePageForm />
+        <HomePageFormContainer>
+            <HomePageForm />
+        </HomePageFormContainer>
     </Box>
 );

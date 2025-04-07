@@ -4,8 +4,8 @@ import { BreadcrumbSection } from '@/components/BreadcrumbSection';
 import { useParams } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import {
-    NewsItemContainer,
-    PageElemContainer,
+    SingleNewsItemContainer,
+    PageSectionContainer,
 } from '@/components/layoutElements';
 
 export const SingleNewsPage = (): JSX.Element => {
@@ -29,8 +29,8 @@ export const SingleNewsPage = (): JSX.Element => {
     return (
         <Flex direction='column' color='gry'>
             <BreadcrumbSection bg={`${imgPath}${bgImage}`} />
-            <NewsItemContainer>
-                <PageElemContainer disableShadow={true}>
+            <SingleNewsItemContainer>
+                <PageSectionContainer disableShadow={true}>
                     <Heading
                         size={{ base: '2xl', md: '3xl' }}
                         textAlign='center'
@@ -45,8 +45,8 @@ export const SingleNewsPage = (): JSX.Element => {
                             {text}
                         </Text>
                     ))}
-                </PageElemContainer>
-            </NewsItemContainer>
+                </PageSectionContainer>
+            </SingleNewsItemContainer>
         </Flex>
     );
 };

@@ -1,4 +1,4 @@
-import { Heading, Box } from '@chakra-ui/react';
+import { Heading, Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Btn } from '@components/ButtonItems';
@@ -40,17 +40,19 @@ export const SubscribeBox = ({ color }: ISubscribeBoxProps): JSX.Element => {
         <Box maxW='300px' color={color}>
             <Heading mb='3'>{t('subscribe')}</Heading>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <NewsletterInput
-                    register={register}
-                    errors={errors}
-                    name='newsletterEmail'
-                    labelText={t('subscribeText')}
-                    requiredText={t('inputRequired')}
-                    errorText={t('inputError')}
-                />
-                <Btn type='submit'>
-                    <LuMail /> {t('subscribeButton')}
-                </Btn>
+                <Flex direction='column' align='flex-start' gap='3'>
+                    <NewsletterInput
+                        register={register}
+                        errors={errors}
+                        name='newsletterEmail'
+                        labelText={t('subscribeText')}
+                        requiredText={t('inputRequired')}
+                        errorText={t('inputError')}
+                    />
+                    <Btn type='submit'>
+                        <LuMail /> {t('subscribeButton')}
+                    </Btn>
+                </Flex>
             </form>
         </Box>
     );

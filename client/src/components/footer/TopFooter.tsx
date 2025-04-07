@@ -1,6 +1,6 @@
 import { Box, Text, Heading } from '@chakra-ui/react';
 import {
-    FooterItemContainer,
+    FooterSectionContainer,
     FooterWrapperContainer,
 } from '@components/layoutElements';
 import { LogoText } from '@components/LogoText';
@@ -35,7 +35,7 @@ export const TopFooter = (): JSX.Element => {
     return (
         <Box>
             <FooterWrapperContainer>
-                <FooterItemContainer flex='2'>
+                <FooterSectionContainer flex='2'>
                     <LogoText />
                     <LinkItem
                         url={`tel:${phone}`}
@@ -50,8 +50,8 @@ export const TopFooter = (): JSX.Element => {
                         disableHideText
                     />
                     <Text>{t('contactInfo:addressText')}</Text>
-                </FooterItemContainer>
-                <FooterItemContainer flex='1'>
+                </FooterSectionContainer>
+                <FooterSectionContainer flex='1'>
                     <Heading size='xl'>{t('footer:news')}</Heading>
                     {news.reverse().map(({ path, label }) => (
                         <LinkItem
@@ -62,8 +62,8 @@ export const TopFooter = (): JSX.Element => {
                             disableHideText
                         />
                     ))}
-                </FooterItemContainer>
-                <FooterItemContainer flex='2'>
+                </FooterSectionContainer>
+                <FooterSectionContainer flex='2'>
                     <Heading size='xl'>{t('footer:links')}</Heading>
                     {rooms.map(({ path, header }) => (
                         <LinkItem
@@ -74,10 +74,10 @@ export const TopFooter = (): JSX.Element => {
                             disableHideText
                         />
                     ))}
-                </FooterItemContainer>
-                <FooterItemContainer flex='2'>
+                </FooterSectionContainer>
+                <FooterSectionContainer flex='2'>
                     <SubscribeBox color='wth' />
-                </FooterItemContainer>
+                </FooterSectionContainer>
             </FooterWrapperContainer>
         </Box>
     );

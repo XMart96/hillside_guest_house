@@ -1,5 +1,17 @@
 import { JSX, ReactNode } from 'react';
-import { Flex } from '@chakra-ui/react';
+import { Flex, FlexProps } from '@chakra-ui/react';
+
+interface ISimpleContainerProps extends FlexProps {
+    children: ReactNode;
+}
+const SimpleContainer = ({
+    children,
+    ...props
+}: ISimpleContainerProps): JSX.Element => (
+    <Flex maxW='1100px' w='100%' mx='auto' px='5' py='1' {...props}>
+        {children}
+    </Flex>
+);
 
 interface IHeaderWrapperContainerProps {
     children: ReactNode;
@@ -7,17 +19,9 @@ interface IHeaderWrapperContainerProps {
 export const HeaderWrapperContainer = ({
     children,
 }: IHeaderWrapperContainerProps): JSX.Element => (
-    <Flex
-        maxW='1100px'
-        w='100%'
-        mx='auto'
-        px='5'
-        py='1'
-        justify='space-between'
-        align='center'
-    >
+    <SimpleContainer justify='space-between' align='center'>
         {children}
-    </Flex>
+    </SimpleContainer>
 );
 
 interface IFooterWrapperContainerProps {
@@ -26,27 +30,22 @@ interface IFooterWrapperContainerProps {
 export const FooterWrapperContainer = ({
     children,
 }: IFooterWrapperContainerProps): JSX.Element => (
-    <Flex
-        maxW='1100px'
-        w='100%'
-        mx='auto'
-        px='5'
-        py='3'
+    <SimpleContainer
+        wrap='wrap'
         justify='center'
         align='baseline'
         color='wht'
-        wrap='wrap'
         gap='8'
     >
         {children}
-    </Flex>
+    </SimpleContainer>
 );
 
 interface IFooterItemContainerProps {
     children: ReactNode;
     flex?: string;
 }
-export const FooterItemContainer = ({
+export const FooterSectionContainer = ({
     children,
     flex,
 }: IFooterItemContainerProps): JSX.Element => (
@@ -61,21 +60,19 @@ export const FooterItemContainer = ({
     </Flex>
 );
 
-interface IFooterItemContainerProps {
+interface IContactsWrapperContainerProps {
     children: ReactNode;
 }
 export const ContactsWrapperContainer = ({
     children,
-}: IFooterItemContainerProps): JSX.Element => (
-    <Flex maxW='1100px' w='100%' mx='auto' px='5' py='1'>
-        {children}
-    </Flex>
+}: IContactsWrapperContainerProps): JSX.Element => (
+    <SimpleContainer>{children}</SimpleContainer>
 );
 
 interface IContactsItemContainer {
     children: ReactNode;
 }
-export const ContactsItemContainer = ({
+export const ContactsSectionContainer = ({
     children,
 }: IContactsItemContainer): JSX.Element => (
     <Flex
@@ -91,17 +88,19 @@ export const ContactsItemContainer = ({
     </Flex>
 );
 
-interface IPageElemContainer {
+interface IPageSectionContainer {
     children: ReactNode;
     disableShadow?: boolean;
+    w?: FlexProps['w'];
 }
-export const PageElemContainer = ({
+export const PageSectionContainer = ({
     children,
     disableShadow,
-}: IPageElemContainer): JSX.Element => (
+    w = '100%',
+}: IPageSectionContainer): JSX.Element => (
     <Flex
         direction='column'
-        w='100%'
+        w={w}
         my='5'
         p='3'
         bg='wht'
@@ -118,17 +117,15 @@ interface IContactUsNowContainer {
 export const ContactUsNowContainer = ({
     children,
 }: IContactUsNowContainer): JSX.Element => (
-    <Flex maxW='1100px' w='100%' mx='auto' px='5' py='1'>
-        {children}
-    </Flex>
+    <SimpleContainer>{children}</SimpleContainer>
 );
 
-interface IContactUsNowItemContainer {
+interface IContactUsNowSectionContainer {
     children: ReactNode;
 }
-export const ContactUsNowItemContainer = ({
+export const ContactUsNowSectionContainer = ({
     children,
-}: IContactUsNowItemContainer): JSX.Element => (
+}: IContactUsNowSectionContainer): JSX.Element => (
     <Flex
         bg='rgba(0, 0, 0, 0.3)'
         direction={{ base: 'column', md: 'row' }}
@@ -150,29 +147,18 @@ interface INewsPageContainer {
 export const NewsPageContainer = ({
     children,
 }: INewsPageContainer): JSX.Element => (
-    <Flex
-        maxW='1100px'
-        w='100%'
-        mx='auto'
-        px='5'
-        py='1'
-        justify='center'
-        gap='3'
-        wrap='wrap'
-    >
+    <SimpleContainer justify='center' gap='3' wrap='wrap'>
         {children}
-    </Flex>
+    </SimpleContainer>
 );
 
-interface INewsItemContainer {
+interface ISingleNewsItemContainer {
     children: ReactNode;
 }
-export const NewsItemContainer = ({
+export const SingleNewsItemContainer = ({
     children,
-}: INewsItemContainer): JSX.Element => (
-    <Flex maxW='1100px' w='100%' mx='auto' px='5' py='1'>
-        {children}
-    </Flex>
+}: ISingleNewsItemContainer): JSX.Element => (
+    <SimpleContainer>{children}</SimpleContainer>
 );
 
 interface IRoomsPageContainer {
@@ -181,35 +167,53 @@ interface IRoomsPageContainer {
 export const RoomsPageContainer = ({
     children,
 }: IRoomsPageContainer): JSX.Element => (
-    <Flex
+    <SimpleContainer
         direction={{ base: 'column', sm: 'row' }}
-        maxW='1100px'
-        w='100%'
-        mx='auto'
-        px='5'
-        py='1'
         justify={{ base: 'center', md: 'space-between' }}
         align='center'
         wrap='wrap'
     >
         {children}
-    </Flex>
+    </SimpleContainer>
 );
 
-interface IRoomItemContainer {
+interface ISingleRoomItemContainer {
     children: ReactNode;
 }
-export const RoomItemContainer = ({
+export const SingleRoomItemContainer = ({
     children,
-}: IRoomItemContainer): JSX.Element => (
+}: ISingleRoomItemContainer): JSX.Element => (
+    <SimpleContainer>{children}</SimpleContainer>
+);
+
+interface IBookPageContainer {
+    children: ReactNode;
+}
+export const BookPageContainer = ({
+    children,
+}: IBookPageContainer): JSX.Element => (
+    <SimpleContainer>{children}</SimpleContainer>
+);
+
+interface IHomePageFormContainer {
+    children: ReactNode;
+}
+export const HomePageFormContainer = ({
+    children,
+}: IHomePageFormContainer): JSX.Element => (
     <Flex
-        direction='column'
-        w={{ base: '100%', sm: '80%', md: '49%' }}
-        my='5'
-        p='3'
         bg='wht'
-        rounded='lg'
+        position='absolute'
+        color='gry'
+        w={{ base: 'inherit', md: '95%' }}
+        bottom='10'
+        left='calc(50% - 12px)'
+        transform='translateX(-50%)'
+        maxW='fit-content'
+        p='5'
+        m='3'
         shadow='0 10px 20px 7px rgba(0, 0, 0, 0.1)'
+        rounded='lg'
     >
         {children}
     </Flex>

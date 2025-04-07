@@ -4,7 +4,7 @@ import { BreadcrumbSection } from '@/components/BreadcrumbSection';
 import { Map } from '@/components/Map';
 import {
     ContactsWrapperContainer,
-    PageElemContainer,
+    PageSectionContainer,
 } from '@/components/layoutElements';
 import { useTranslation } from 'react-i18next';
 import { ContactsItem } from '@/components/ContactsItem';
@@ -49,14 +49,14 @@ export const ContactsPage = (): JSX.Element => {
         <Flex direction='column'>
             <BreadcrumbSection bg='/assets/room3/10-min.jpg' />
             <ContactsWrapperContainer>
-                <PageElemContainer>
+                <PageSectionContainer>
                     <Wrap>
                         {contactsItems.map(item => (
                             <ContactsItem key={item.type} {...item} />
                         ))}
                     </Wrap>
                     <Map />
-                </PageElemContainer>
+                </PageSectionContainer>
             </ContactsWrapperContainer>
         </Flex>
     );

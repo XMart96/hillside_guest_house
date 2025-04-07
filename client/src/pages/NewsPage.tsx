@@ -3,7 +3,7 @@ import { Flex, Box } from '@chakra-ui/react';
 import { BreadcrumbSection } from '@/components/BreadcrumbSection';
 import {
     NewsPageContainer,
-    PageElemContainer,
+    PageSectionContainer,
 } from '@/components/layoutElements';
 import { useTranslation } from 'react-i18next';
 import { NewsItem } from '@/components/NewsItem';
@@ -35,9 +35,9 @@ export const NewsPage = (): JSX.Element => {
                     ))}
                 </Box>
                 <Box>
-                    <PageElemContainer>
+                    <PageSectionContainer>
                         <SubscribeBox color='gry' />
-                    </PageElemContainer>
+                    </PageSectionContainer>
                 </Box>
             </NewsPageContainer>
         </Flex>

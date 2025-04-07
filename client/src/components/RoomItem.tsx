@@ -1,6 +1,6 @@
 import { JSX, useState } from 'react';
 import { useLocation } from 'react-router';
-import { RoomItemContainer } from '@components/layoutElements';
+import { PageSectionContainer } from '@components/layoutElements';
 import { Card, Skeleton, Image, Text, FormatNumber } from '@chakra-ui/react';
 import { ButtonLinkItem } from '@components/LinkItems';
 import { LuArrowRight } from 'react-icons/lu';
@@ -27,7 +27,7 @@ export const RoomItem = ({
     const location = useLocation();
 
     return (
-        <RoomItemContainer>
+        <PageSectionContainer w={{ base: '100%', sm: '80%', md: '49%' }}>
             <Card.Root overflow='hidden' bg='wht' color='gry' border='none'>
                 <Skeleton
                     loading={imgLoading}
@@ -69,6 +69,6 @@ export const RoomItem = ({
                     />
                 </Card.Footer>
             </Card.Root>
-        </RoomItemContainer>
+        </PageSectionContainer>
     );
 };

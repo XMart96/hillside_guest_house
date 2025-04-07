@@ -1,5 +1,5 @@
 import { JSX, useState } from 'react';
-import { PageElemContainer } from '@/components/layoutElements';
+import { PageSectionContainer } from '@/components/layoutElements';
 import { ButtonLinkItem } from '@components/LinkItems';
 import { Card, Image, Flex, HStack, Skeleton } from '@chakra-ui/react';
 import { LuArrowRight, LuCalendarClock } from 'react-icons/lu';
@@ -27,7 +27,7 @@ export const NewsItem = ({
     const location = useLocation();
 
     return (
-        <PageElemContainer>
+        <PageSectionContainer>
             <Card.Root
                 flexDirection={{ base: 'column', sm: 'row' }}
                 alignItems={{ base: 'center', sm: 'stretch' }}
@@ -46,7 +46,7 @@ export const NewsItem = ({
                 >
                     <Image
                         objectFit='cover'
-                        maxW='250px'
+                        maxW={{ base: '', sm: '250px' }}
                         src={`${imgPath}${bgImage}`}
                         alt={header}
                         onLoad={() => setImgLoading(false)}
@@ -74,6 +74,6 @@ export const NewsItem = ({
                     </Card.Footer>
                 </Flex>
             </Card.Root>
-        </PageElemContainer>
+        </PageSectionContainer>
     );
 };

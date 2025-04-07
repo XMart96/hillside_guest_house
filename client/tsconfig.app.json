@@ -28,7 +28,8 @@
             "@chakra/*": ["src/components/ui/*"],
             "@pages/*": ["src/pages/*"],
             "@header/*": ["src/components/header/*"],
-            "@footer/*": ["src/components/footer/*"]
+            "@footer/*": ["src/components/footer/*"],
+            "@book/*": ["src/components/book/*"]
         }
     },
     "include": ["src"]

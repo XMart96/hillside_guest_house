@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import {
     ContactUsNowContainer,
-    ContactUsNowItemContainer,
+    ContactUsNowSectionContainer,
 } from '@components/layoutElements';
 import { Box, Stack, Heading, Text, HStack } from '@chakra-ui/react';
 import { data } from '@/data';
@@ -31,7 +31,7 @@ export const ContactUsNow = () => {
                 >
                     <source src='/assets/other/aygestan.mp4' type='video/mp4' />
                 </video>
-                <ContactUsNowItemContainer>
+                <ContactUsNowSectionContainer>
                     <Stack color='wht'>
                         <Heading size={{ base: '2xl', md: '3xl' }}>
                             {t('contactUs')}
@@ -42,7 +42,7 @@ export const ContactUsNow = () => {
                         <SocialLinkItem name='Telegram' url={telegram} />
                         <SocialLinkItem name='WhatsApp' url={whatsApp} />
                     </HStack>
-                </ContactUsNowItemContainer>
+                </ContactUsNowSectionContainer>
             </Box>
         </ContactUsNowContainer>
     );
