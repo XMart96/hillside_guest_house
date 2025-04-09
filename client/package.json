@@ -44,5 +44,6 @@
         "typescript-eslint": "^8.24.1",
         "vite": "^6.2.0",
         "vite-tsconfig-paths": "^5.1.4"
-    }
+    },
+    "proxy": "http://localhost:5000"
 }
