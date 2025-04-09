@@ -1,7 +1,9 @@
-import { Menu, Portal, Text, Icon, Button } from '@chakra-ui/react';
 import { JSX } from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { LuLanguages } from 'react-icons/lu';
+
+import { Button, Icon, Menu, Portal, Text } from '@chakra-ui/react';
 
 type langType = {
     [key: string]: string;

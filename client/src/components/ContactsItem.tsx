@@ -1,8 +1,10 @@
-import { ContactsSectionContainer } from '@components/layoutElements';
-import { Icon, Heading, Text } from '@chakra-ui/react';
-import { ContactsLinkItem } from './LinkItems';
-import { IconType } from 'react-icons';
 import { JSX } from 'react';
+import { IconType } from 'react-icons';
+
+import { Heading, Icon, Text } from '@chakra-ui/react';
+import { ContactsSectionContainer } from '@components/layoutElements';
+
+import { ContactsLinkItem } from './LinkItems';
 
 interface IContactsItemProps {
     icon: IconType;

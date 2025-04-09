@@ -1,5 +1,6 @@
-import { Button } from '@chakra-ui/react';
 import { JSX, ReactNode } from 'react';
+
+import { Button } from '@chakra-ui/react';
 
 interface IButtonItemProps {
     children: ReactNode;

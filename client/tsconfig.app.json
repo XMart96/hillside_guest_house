@@ -29,7 +29,8 @@
             "@pages/*": ["src/pages/*"],
             "@header/*": ["src/components/header/*"],
             "@footer/*": ["src/components/footer/*"],
-            "@book/*": ["src/components/book/*"]
+            "@book/*": ["src/components/book/*"],
+            "@features/*": ["src/features/*"]
         }
     },
     "include": ["src"]

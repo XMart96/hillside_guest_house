@@ -1,24 +1,26 @@
-import { IHomePageFormValues } from '@/types';
-import { DataList, Box } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
+
 import {
-    format,
-    differenceInDays,
     FormatDistanceFn,
     FormatRelativeFn,
     Locale,
     Localize,
     Match,
+    differenceInDays,
+    format,
 } from 'date-fns';
-import { ru, enUS } from 'date-fns/locale';
+import { enUS, ru } from 'date-fns/locale';
+
+import { IHomePageFormValues } from '@/types';
+import { Box, DataList } from '@chakra-ui/react';
 
 interface IFormDataListProps {
-    formValues: IHomePageFormValues;
+    values: IHomePageFormValues;
 }
-export const FormDataList = ({ formValues }: IFormDataListProps) => {
+export const FormDataList = ({ values }: IFormDataListProps) => {
     const ns = ['initialForm'];
     const { t, i18n } = useTranslation(ns);
-    const { checkIn, checkOut, adult } = formValues;
+    const { checkIn, checkOut, adult } = values;
 
     const am: Locale = {
         code: 'am',
@@ -81,10 +83,10 @@ export const FormDataList = ({ formValues }: IFormDataListProps) => {
         ? format(new Date(checkOut), 'EEEE, dd MMMM yyyy', { locale })
         : '—';
     const nightCountValue =
-        formValues.checkIn && formValues.checkOut
+        values.checkIn && values.checkOut
             ? differenceInDays(
-                  new Date(formValues.checkOut),
-                  new Date(formValues.checkIn)
+                  new Date(values.checkOut),
+                  new Date(values.checkIn),
               )
             : 0;
 

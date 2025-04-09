@@ -20,5 +20,5 @@ export const system = createSystem(
                 },
             },
         },
-    })
+    }),
 );

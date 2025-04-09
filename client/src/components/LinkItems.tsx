@@ -1,9 +1,11 @@
+import { JSX } from 'react';
+
+import { IconType } from 'react-icons';
+import { FaTelegram, FaWhatsapp } from 'react-icons/fa';
+import { Link as RouterLink } from 'react-router';
+
 import { Link as ChakraLink, Icon, Text } from '@chakra-ui/react';
 import { Tooltip } from '@chakra/tooltip';
-import { JSX } from 'react';
-import { IconType } from 'react-icons';
-import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
-import { Link as RouterLink } from 'react-router';
 import { Btn } from '@components/ButtonItems';
 
 interface INavLinkItemProps {

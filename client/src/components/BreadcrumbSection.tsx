@@ -1,7 +1,8 @@
-import { Stack, Heading } from '@chakra-ui/react';
 import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router';
+
+import { Heading, Stack } from '@chakra-ui/react';
 import { Breadcrumb } from '@components/Breadcrumb';
 
 interface IBreadcrumbSectionProps {

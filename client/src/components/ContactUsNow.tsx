@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
+
+import { data } from '@/data';
+import { Box, HStack, Heading, Stack, Text } from '@chakra-ui/react';
+import { SocialLinkItem } from '@components/LinkItems';
 import {
     ContactUsNowContainer,
     ContactUsNowSectionContainer,
 } from '@components/layoutElements';
-import { Box, Stack, Heading, Text, HStack } from '@chakra-ui/react';
-import { data } from '@/data';
-import { SocialLinkItem } from '@components/LinkItems';
 
 export const ContactUsNow = () => {
     const ns = ['contactUsNow'];

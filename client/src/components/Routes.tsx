@@ -1,17 +1,18 @@
+import { JSX } from 'react';
+
 import { BrowserRouter, Route, Routes } from 'react-router';
 
-import { Layout } from '@pages/Layout';
-import { HomePage } from '@/pages/HomePage';
 import { AboutPage } from '@/pages/AboutPage';
-import { RoomsPage } from '@/pages/RoomsPage';
-import { SingleRoomPage } from '@/pages/SingleRoomPage';
-import { ServicesPage } from '@/pages/ServicesPage';
-import { NewsPage } from '@/pages/NewsPage';
-import { SingleNewsPage } from '@/pages/SingleNewsPage';
-import { ContactsPage } from '@/pages/ContactsPage';
 import { BookPage } from '@/pages/BookPage';
+import { ContactsPage } from '@/pages/ContactsPage';
+import { HomePage } from '@/pages/HomePage';
+import { NewsPage } from '@/pages/NewsPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
-import { JSX } from 'react';
+import { RoomsPage } from '@/pages/RoomsPage';
+import { ServicesPage } from '@/pages/ServicesPage';
+import { SingleNewsPage } from '@/pages/SingleNewsPage';
+import { SingleRoomPage } from '@/pages/SingleRoomPage';
+import { Layout } from '@pages/Layout';
 
 export const RoutesComponent = (): JSX.Element => (
     <BrowserRouter>

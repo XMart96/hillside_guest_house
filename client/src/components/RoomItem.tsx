@@ -1,9 +1,11 @@
 import { JSX, useState } from 'react';
-import { useLocation } from 'react-router';
-import { PageSectionContainer } from '@components/layoutElements';
-import { Card, Skeleton, Image, Text, FormatNumber } from '@chakra-ui/react';
-import { ButtonLinkItem } from '@components/LinkItems';
+
 import { LuArrowRight } from 'react-icons/lu';
+import { useLocation } from 'react-router';
+
+import { Card, FormatNumber, Image, Skeleton, Text } from '@chakra-ui/react';
+import { ButtonLinkItem } from '@components/LinkItems';
+import { PageSectionContainer } from '@components/layoutElements';
 
 interface IRoomItemProps {
     path: string;

@@ -1,7 +1,8 @@
-import { Stack } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
-import { NavLinkItem } from '@components/LinkItems';
 import { JSX } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { Stack } from '@chakra-ui/react';
+import { NavLinkItem } from '@components/LinkItems';
 
 interface IDrawerTriggerProps {
     onClose?: () => void;

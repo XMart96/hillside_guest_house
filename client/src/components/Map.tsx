@@ -1,6 +1,7 @@
-import { Box } from '@chakra-ui/react';
-import { YMaps, Map as YMap, Placemark } from '@iminside/react-yandex-maps';
 import { JSX } from 'react';
+
+import { Box } from '@chakra-ui/react';
+import { Placemark, Map as YMap, YMaps } from '@iminside/react-yandex-maps';
 
 export const Map = (): JSX.Element => (
     <YMaps query={{ apikey: import.meta.env.VITE_MAPS_KEY }}>

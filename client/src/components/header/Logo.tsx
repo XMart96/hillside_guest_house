@@ -1,6 +1,7 @@
-import { Link as ChakraLink, Image } from '@chakra-ui/react';
 import { JSX } from 'react';
 import { Link as RouterLink } from 'react-router';
+
+import { Link as ChakraLink, Image } from '@chakra-ui/react';
 
 interface ILogoProps {
     onClose?: () => void;

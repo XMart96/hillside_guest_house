@@ -1,9 +1,11 @@
 import { JSX, useState } from 'react';
-import { PageSectionContainer } from '@/components/layoutElements';
-import { ButtonLinkItem } from '@components/LinkItems';
-import { Card, Image, Flex, HStack, Skeleton } from '@chakra-ui/react';
+
 import { LuArrowRight, LuCalendarClock } from 'react-icons/lu';
 import { useLocation } from 'react-router';
+
+import { PageSectionContainer } from '@/components/layoutElements';
+import { Card, Flex, HStack, Image, Skeleton } from '@chakra-ui/react';
+import { ButtonLinkItem } from '@components/LinkItems';
 
 interface INewsItemProps {
     date: string;

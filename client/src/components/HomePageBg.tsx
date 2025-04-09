@@ -1,6 +1,7 @@
+import { JSX } from 'react';
+
 import { Box } from '@chakra-ui/react';
 import { HomePageForm } from '@components/HomePageForm';
-import { JSX } from 'react';
 import { HomePageFormContainer } from '@components/layoutElements';
 
 export const HomePageBg = (): JSX.Element => (

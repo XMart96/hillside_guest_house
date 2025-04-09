@@ -1,6 +1,8 @@
-import { Link as ChakraLink, Text } from '@chakra-ui/react';
 import { JSX } from 'react';
+
 import { Link as RouterLink } from 'react-router';
+
+import { Link as ChakraLink, Text } from '@chakra-ui/react';
 
 export const LogoText = (): JSX.Element => (
     <ChakraLink asChild textDecoration='none' _focus={{ outline: 'none' }}>

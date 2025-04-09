@@ -1,22 +1,25 @@
-import {
-    NewsletterInputProps,
-    DateInputProps,
-    NumberInputProps,
-} from '@/types';
-import {
-    Field,
-    Input,
-    InputGroup,
-    Icon,
-    NumberInput as ChakraNumberInput,
-} from '@chakra-ui/react';
+import { JSX } from 'react';
+
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Controller } from 'react-hook-form';
 import { LuCalendarSearch, LuCircleX, LuUser } from 'react-icons/lu';
-import { Tooltip } from '@chakra/tooltip';
+
 import { addDays, format, subDays } from 'date-fns';
-import { JSX } from 'react';
+
+import {
+    DateInputProps,
+    NewsletterInputProps,
+    NumberInputProps,
+} from '@/types';
+import {
+    NumberInput as ChakraNumberInput,
+    Field,
+    Icon,
+    Input,
+    InputGroup,
+} from '@chakra-ui/react';
+import { Tooltip } from '@chakra/tooltip';
 
 export const NewsletterInput = ({
     register,
@@ -127,8 +130,8 @@ export const DateInput = ({
                         name === 'checkIn'
                             ? new Date()
                             : formValues.checkIn
-                            ? addDays(formValues.checkIn, 2)
-                            : addDays(new Date(), 2)
+                              ? addDays(formValues.checkIn, 2)
+                              : addDays(new Date(), 2)
                     }
                     maxDate={
                         name === 'checkIn' && formValues.checkOut

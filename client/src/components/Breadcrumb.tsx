@@ -1,6 +1,7 @@
+import React, { JSX } from 'react';
+
 import { Breadcrumb as ChakraBreadcrumb } from '@chakra-ui/react';
 import { LinkItem } from '@components/LinkItems';
-import React, { JSX } from 'react';
 
 interface IBreadcrumbProps {
     pathNames: string[];

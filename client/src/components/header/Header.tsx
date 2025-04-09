@@ -1,7 +1,8 @@
-import { Box } from '@chakra-ui/react';
-import { TopHeader } from '@header/TopHeader';
-import { BottomHeader } from '@header/BottomHeader';
 import { JSX } from 'react';
+
+import { Box } from '@chakra-ui/react';
+import { BottomHeader } from '@header/BottomHeader';
+import { TopHeader } from '@header/TopHeader';
 
 export const Header = (): JSX.Element => (
     <Box as='header'>

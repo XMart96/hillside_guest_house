@@ -1,15 +1,16 @@
-import { Box, Text, Heading } from '@chakra-ui/react';
+import { JSX } from 'react';
+import { useTranslation } from 'react-i18next';
+import { LuLink, LuMail, LuPhone } from 'react-icons/lu';
+
+import { data } from '@/data';
+import { Box, Heading, Text } from '@chakra-ui/react';
+import { LinkItem } from '@components/LinkItems';
+import { LogoText } from '@components/LogoText';
+import { SubscribeBox } from '@components/SubscribeBox';
 import {
     FooterSectionContainer,
     FooterWrapperContainer,
 } from '@components/layoutElements';
-import { LogoText } from '@components/LogoText';
-import { LinkItem } from '@components/LinkItems';
-import { data } from '@/data';
-import { LuPhone, LuMail, LuLink } from 'react-icons/lu';
-import { useTranslation } from 'react-i18next';
-import { SubscribeBox } from '@components/SubscribeBox';
-import { JSX } from 'react';
 
 export const TopFooter = (): JSX.Element => {
     const { phone, email } = data;

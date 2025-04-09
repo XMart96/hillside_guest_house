@@ -1,11 +1,13 @@
-import { Heading, Box, Flex } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { Btn } from '@components/ButtonItems';
-import { LuMail } from 'react-icons/lu';
-import { NewsletterInput } from '@components/InputItems';
-import { INewsletterFormValues } from '@/types';
 import { JSX } from 'react';
+
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import { LuMail } from 'react-icons/lu';
+
+import { INewsletterFormValues } from '@/types';
+import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Btn } from '@components/ButtonItems';
+import { NewsletterInput } from '@components/InputItems';
 
 interface ISubscribeBoxProps {
     color: string;
@@ -27,7 +29,7 @@ export const SubscribeBox = ({ color }: ISubscribeBoxProps): JSX.Element => {
         }
         if (
             !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,6}$/.test(
-                data.newsletterEmail
+                data.newsletterEmail,
             )
         ) {
             return;

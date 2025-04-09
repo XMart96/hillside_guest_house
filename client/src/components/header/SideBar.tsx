@@ -1,10 +1,11 @@
-import { Drawer, Portal } from '@chakra-ui/react';
-import { useState, JSX } from 'react';
-import { Nav } from '@header/Nav';
-import { Logo } from '@header/Logo';
+import { JSX, useState } from 'react';
 import { LuMenu, LuX } from 'react-icons/lu';
-import { Rights } from '@components/Rights';
+
+import { Drawer, Portal } from '@chakra-ui/react';
 import { BtnOutline } from '@components/ButtonItems';
+import { Rights } from '@components/Rights';
+import { Logo } from '@header/Logo';
+import { Nav } from '@header/Nav';
 
 export const SideBar = (): JSX.Element => {
     const [open, setOpen] = useState<boolean>(false);

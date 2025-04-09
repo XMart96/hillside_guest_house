@@ -1,12 +1,13 @@
-import { ButtonGroup, Steps, Icon } from '@chakra-ui/react';
-import { Btn } from '@components/ButtonItems';
 import {
-    LuCalendarSearch,
-    LuUserPen,
     LuBanknote,
+    LuCalendarSearch,
     LuCheck,
+    LuUserPen,
 } from 'react-icons/lu';
+
 import { StepContent1 } from '@book/StepContent1';
+import { ButtonGroup, Icon, Steps } from '@chakra-ui/react';
+import { Btn } from '@components/ButtonItems';
 
 const steps = [
     {
