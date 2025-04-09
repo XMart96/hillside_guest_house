@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -14,6 +16,7 @@ let data = {
 };
 
 app.get('/getCalendarData', (req, res) => {
+    console.log('GET /getCalendarData received');
     res.json(data);
 });
 
@@ -22,6 +25,5 @@ app.post('/postCalendarData', (req, res) => {
     data = req.body;
     res.json({ success: true, message: 'Данные сохранены!' });
 });
-
 
 app.listen(process.env.PORT);
