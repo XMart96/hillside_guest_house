@@ -3,7 +3,8 @@ import { JSX, useState } from 'react';
 import { LuArrowRight } from 'react-icons/lu';
 import { useLocation } from 'react-router';
 
-import { Card, FormatNumber, Image, Skeleton, Text } from '@chakra-ui/react';
+import { Card, FormatNumber, Image, Text } from '@chakra-ui/react';
+import { CustomSkeleton } from '@components/CustomSkeleton';
 import { ButtonLinkItem } from '@components/LinkItems';
 import { PageSectionContainer } from '@components/layoutElements';
 
@@ -31,20 +32,13 @@ export const RoomItem = ({
     return (
         <PageSectionContainer w={{ base: '100%', sm: '80%', md: '49%' }}>
             <Card.Root overflow='hidden' bg='wht' color='gry' border='none'>
-                <Skeleton
-                    loading={imgLoading}
-                    variant='shine'
-                    css={{
-                        '--start-color': 'colors.grn',
-                        '--end-color': 'colors.wht',
-                    }}
-                >
+                <CustomSkeleton loading={imgLoading}>
                     <Image
                         src={`${imgPath}${bgImage}`}
                         alt={header}
                         onLoad={() => setImgLoading(false)}
                     />
-                </Skeleton>
+                </CustomSkeleton>
                 <Card.Body gap='3'>
                     <Card.Title>{header}</Card.Title>
                     <Card.Description>{subheader}</Card.Description>

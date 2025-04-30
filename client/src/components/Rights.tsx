@@ -9,5 +9,9 @@ export const Rights = (): JSX.Element => {
     const { t } = useTranslation(ns);
     const year = new Date().getFullYear();
 
-    return <Text color='wht'>{t('rights', { year })}</Text>;
+    return (
+        <Text py='3' color='wht'>
+            {t('rights', { year })}
+        </Text>
+    );
 };
