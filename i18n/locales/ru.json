@@ -1,0 +1,73 @@
+{
+    "seo": {
+        "home": {
+            "title": "home",
+            "description": "sdfdsf"
+        },
+        "about": {
+            "title": "about",
+            "description": "sdfdsf"
+        },
+        "rooms": {
+            "title": "rooms",
+            "description": "sdfdsf"
+        },
+        "services": {
+            "title": "rooms",
+            "description": "sdfdsf"
+        },
+        "news": {
+            "title": "news",
+            "description": "sdfdsf"
+        },
+        "contacts": {
+            "title": "contacts",
+            "description": "sdfdsf"
+        },
+        "book": {
+            "title": "book",
+            "description": "sdfdsf"
+        }
+    },
+    "navigation": {
+        "home": "Главная",
+        "about": "О нас",
+        "rooms": "Номера",
+        "services": "Услуги",
+        "news": "Новости",
+        "contacts": "Контакты",
+        "book": "Забронировать"
+    },
+    "footer": {
+        "links": "Ссылки",
+        "rooms": "Номера",
+        "news": "Новости",
+        "rights": "Все права защищены"
+    },
+    "rooms": {
+        "deluxe": {
+            "name": "Делюкс",
+            "description": "Двухместный номер DELUXE"
+        },
+        "standard": {
+            "name": "Стандарт",
+            "description": "Двухместный номер STANDARD"
+        },
+        "comfort": {
+            "name": "Комфорт",
+            "description": "Двухместный номер COMFORT"
+        },
+        "superior": {
+            "name": "Супериор",
+            "description": "Двухместный номер SUPERIOR"
+        }
+    },
+    "news": {},
+    "contact": {
+        "phone": "Телефон",
+        "email": "Почта",
+        "time": "Время работы",
+        "address": "Адрес",
+        "addressText": "Ул. Геворга Джаукяна 3/7, Ереван, Армения"
+    }
+}

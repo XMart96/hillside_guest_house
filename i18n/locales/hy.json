@@ -1,0 +1,73 @@
+{
+    "seo": {
+        "home": {
+            "title": "home",
+            "description": "sdfdsf"
+        },
+        "about": {
+            "title": "about",
+            "description": "sdfdsf"
+        },
+        "rooms": {
+            "title": "rooms",
+            "description": "sdfdsf"
+        },
+        "services": {
+            "title": "rooms",
+            "description": "sdfdsf"
+        },
+        "news": {
+            "title": "news",
+            "description": "sdfdsf"
+        },
+        "contacts": {
+            "title": "contacts",
+            "description": "sdfdsf"
+        },
+        "book": {
+            "title": "book",
+            "description": "sdfdsf"
+        }
+    },
+    "navigation": {
+        "home": "Գլխավոր",
+        "about": "Մեր մասին",
+        "rooms": "Սենյակներ",
+        "services": "Ծառայություններ",
+        "news": "Նորություններ",
+        "contacts": "Կոնտակտներ",
+        "book": "Ամրագրել"
+    },
+    "footer": {
+        "links": "Հղումներ",
+        "rooms": "Սենյակներ",
+        "news": "Նորություններ",
+        "rights": "Բոլոր իրավունքները պաշտպանված են"
+    },
+    "rooms": {
+        "deluxe": {
+            "name": "Դելյուքս",
+            "description": "Երկտեղանի սենյակ DELUXE"
+        },
+        "standard": {
+            "name": "Ստանդարտ",
+            "description": "Երկտեղանի սենյակ STANDARD"
+        },
+        "comfort": {
+            "name": "Կոմֆորտ",
+            "description": "Երկտեղանի սենյակ COMFORT"
+        },
+        "superior": {
+            "name": "Սուպերիոր",
+            "description": "Երկտեղանի սենյակ SUPERIOR"
+        }
+    },
+    "news": {},
+    "contact": {
+        "phone": "Հեռախոսահամար",
+        "email": "Էլ․ Փոստ",
+        "time": "Աշխատանքային ժամեր",
+        "address": "Հասցե",
+        "addressText": "Գևորգ Ջահուկյան 3/7, Երևան, Հայաստան"
+    }
+}

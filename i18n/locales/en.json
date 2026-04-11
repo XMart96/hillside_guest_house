@@ -1,0 +1,77 @@
+{
+    "seo": {
+        "home": {
+            "title": "home",
+            "description": "sdfdsf"
+        },
+        "about": {
+            "title": "about",
+            "description": "sdfdsf"
+        },
+        "rooms": {
+            "title": "rooms",
+            "description": "sdfdsf"
+        },
+        "services": {
+            "title": "rooms",
+            "description": "sdfdsf"
+        },
+        "news": {
+            "title": "news",
+            "description": "sdfdsf"
+        },
+        "contacts": {
+            "title": "contacts",
+            "description": "sdfdsf"
+        },
+        "book": {
+            "title": "book",
+            "description": "sdfdsf"
+        }
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "About us",
+        "rooms": "Rooms",
+        "services": "Services",
+        "news": "News",
+        "contacts": "Contacts",
+        "book": "Book now"
+    },
+    "footer": {
+        "links": "Links",
+        "rooms": "Rooms",
+        "news": "News",
+        "rights": "All rights reserved"
+    },
+    "rooms": {
+        "deluxe": {
+            "name": "Deluxe",
+            "fullName": "Double Room DELUX",
+            "description": "Ideal for those seeking maximum comfort and exclusivity during their stay"
+        },
+        "standard": {
+            "name": "Standard",
+            "fullName": "Double Room STANDARD",
+            "description": "Perfect for travelers looking for a comfortable and affordable place to stay"
+        },
+        "comfort": {
+            "name": "Comfort",
+            "fullName": "Double Room COMFORT",
+            "description": "An excellent choice for those who value coziness and additional amenities at a reasonable price"
+        },
+        "superior": {
+            "name": "Superior",
+            "fullName": "Double Room SUPERIOR",
+            "description": "Designed for guests who want to enjoy a spacious and stylish room with an enhanced level of service"
+        }
+    },
+    "news": {},
+    "contact": {
+        "phone": "Phone",
+        "email": "Email",
+        "time": "Open time",
+        "address": "Address",
+        "addressText": "Gevorg Jahukyan street 3/7, Yerevan, Armenia"
+    }
+}

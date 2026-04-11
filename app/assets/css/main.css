@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+    --font-sans: 'Poppins', system-ui, sans-serif;
+    --font-display: 'Mr Dafoe', cursive;
+
+    /* --font-size-xs: clamp(0.625rem, calc(0.75 / 1440 * 100vw), 0.75rem);
+    --font-size-sm: clamp(0.75rem, calc(0.875 / 1440 * 100vw), 0.875rem);
+    --font-size-base: clamp(0.875rem, calc(1 / 1440 * 100vw), 1rem);
+    --font-size-lg: clamp(1rem, calc(1.125 / 1440 * 100vw), 1.125rem);
+    --font-size-xl: clamp(1.125rem, calc(1.25 / 1440 * 100vw), 1.25rem);
+    --font-size-2xl: clamp(1.25rem, calc(1.5 / 1440 * 100vw), 1.5rem);
+    --font-size-3xl: clamp(1.5rem, calc(1.875 / 1440 * 100vw), 1.875rem);
+    --font-size-4xl: clamp(1.875rem, calc(2.25 / 1440 * 100vw), 2.25rem);
+    --font-size-5xl: clamp(2.25rem, calc(3 / 1440 * 100vw), 3rem);
+    --font-size-6xl: clamp(3rem, calc(3.75 / 1440 * 100vw), 3.75rem);
+    --font-size-7xl: clamp(3.75rem, calc(4.5 / 1440 * 100vw), 4.5rem);
+    --font-size-8xl: clamp(4.5rem, calc(6 / 1440 * 100vw), 6rem);
+    --font-size-9xl: clamp(6rem, calc(8 / 1440 * 100vw), 8rem); */
+}
+
+@theme static {
+    --color-h-green-50: #f0fdfa;
+    --color-h-green-100: #cef9f0;
+    --color-h-green-200: #9cf3e3;
+    --color-h-green-300: #63e5d2;
+    --color-h-green-400: #33cebc;
+    --color-h-green-500: #1cc3b2;
+    --color-h-green-600: #128f85;
+    --color-h-green-700: #13726b;
+    --color-h-green-800: #145b57;
+    --color-h-green-900: #154c49;
+    --color-h-green-950: #052e2d;
+
+    /* --color-h-blue-50: #f2f9fd;
+    --color-h-blue-100: #e4f1fa;
+    --color-h-blue-200: #c3e4f4;
+    --color-h-blue-300: #8dceec;
+    --color-h-blue-400: #51b5df;
+    --color-h-blue-500: #2a9ccd;
+    --color-h-blue-600: #1c7dad;
+    --color-h-blue-700: #18648c;
+    --color-h-blue-800: #175575;
+    --color-h-blue-900: #194761; */
+    --color-h-blue-950: #0e2737;
+
+    --color-h-light-gray-50: #f9fafb;
+    --color-h-light-gray-100: #f3f4f6;
+    --color-h-light-gray-200: #e5e7eb;
+    --color-h-light-gray-300: #d1d5db;
+    --color-h-light-gray-400: #9ca4af;
+    --color-h-light-gray-500: #636a76;
+    --color-h-light-gray-600: #4b5663;
+    --color-h-light-gray-700: #374251;
+    --color-h-light-gray-800: #1f2a37;
+    --color-h-light-gray-900: #111927;
+    --color-h-light-gray-950: #030812;
+
+    /* --color-h-dark-gray-50: #f6f7f9;
+    --color-h-dark-gray-100: #eceef2;
+    --color-h-dark-gray-200: #d4dae3;
+    --color-h-dark-gray-300: #afbbca;
+    --color-h-dark-gray-400: #8496ac;
+    --color-h-dark-gray-500: #657992;
+    --color-h-dark-gray-600: #506179;
+    --color-h-dark-gray-700: #414f63;
+    --color-h-dark-gray-800: #394353;
+    --color-h-dark-gray-900: #333b47; */
+    --color-h-dark-gray-950: #2a303b;
+}
