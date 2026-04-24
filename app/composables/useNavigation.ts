@@ -5,7 +5,6 @@ export const useNavigation = () => {
     const localePath = useLocalePath();
 
     const items = computed<NavigationMenuItem[]>(() => [
-        { label: t('navigation.home'), to: localePath('/') },
         { label: t('navigation.about'), to: localePath('/about') },
         { label: t('navigation.rooms'), to: localePath('/rooms') },
         { label: t('navigation.services'), to: localePath('/services') },

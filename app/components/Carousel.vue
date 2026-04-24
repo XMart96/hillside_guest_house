@@ -10,7 +10,12 @@ const items = [
 </script>
 
 <template>
-    <UCarousel loop v-slot="{ item }" :items="items">
+    <UCarousel
+        loop
+        v-slot="{ item }"
+        :items="items"
+        :autoplay="{ delay: 8000 }"
+    >
         <NuxtImg
             :src="item"
             loading="lazy"

@@ -3,7 +3,7 @@ const { data } = useData();
 </script>
 
 <template>
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-3 w-fit">
         <LogoText />
         <ULink :to="`tel:${data.phone}`" class="text-2xl text-primary-500">
             {{ formatPhone(data.phone) }}

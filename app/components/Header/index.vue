@@ -8,7 +8,13 @@ const { items } = useNavigation();
         <template #left>
             <LogoText />
         </template>
-        <UNavigationMenu :items="items" variant="link" />
+        <UNavigationMenu
+            :items="items"
+            variant="link"
+            :ui="{
+                link: 'px-1 xl:px-2.5',
+            }"
+        />
         <template #right>
             <UColorModeButton class="hidden sm:flex" />
             <HeaderLocaleSelect />
