@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const items = [
-    'https://picsum.photos/640/640?random=1',
-    'https://picsum.photos/640/640?random=2',
-    'https://picsum.photos/640/640?random=3',
-    'https://picsum.photos/640/640?random=4',
-    'https://picsum.photos/640/640?random=5',
-    'https://picsum.photos/640/640?random=6',
+    '/images/slides/1.jpg',
+    '/images/slides/2.jpg',
+    '/images/slides/3.jpg',
+    '/images/slides/4.jpg',
+    '/images/slides/5.jpg',
+    '/images/slides/6.jpg',
 ];
 </script>
 
@@ -14,7 +14,8 @@ const items = [
         <NuxtImg
             :src="item"
             loading="lazy"
-            class="w-full h-[600px] object-cover"
+            format="webp"
+            class="w-full h-125 lg:h-175 object-cover"
         />
     </UCarousel>
 </template>

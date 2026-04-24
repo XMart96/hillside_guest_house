@@ -1,6 +1,4 @@
 export const useData = () => {
-    const { t } = useI18n();
-
     const data = computed(() => ({
         phone: '+37444290127',
         email: 'info@hillside.am',

@@ -5,7 +5,7 @@ const { items } = useNavigation();
 <template>
     <HeaderTopBar />
     <UHeader mode="slideover">
-        <template #title>
+        <template #left>
             <LogoText />
         </template>
         <UNavigationMenu :items="items" variant="link" />
