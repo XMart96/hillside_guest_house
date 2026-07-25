@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { FooterColumn } from '@nuxt/ui';
-const { items } = useNavigation();
+const { links } = useNavigation();
 const { rooms } = useRooms();
+const { services } = useServices();
 const { news } = useNews();
 const { t } = useI18n();
 const localePath = useLocalePath();
@@ -9,13 +10,20 @@ const localePath = useLocalePath();
 const columns = computed<FooterColumn[]>(() => [
     {
         label: t('footer.links'),
-        children: items.value as FooterColumn['children'],
+        children: links.value as FooterColumn['children'],
     },
     {
         label: t('footer.rooms'),
         children: rooms.value.map((room) => ({
             label: room.name,
             to: localePath(`/rooms/${room.slug}`),
+        })),
+    },
+    {
+        label: t('footer.services'),
+        children: services.value.map((service) => ({
+            label: service.name,
+            to: localePath(`/services/${service.slug}`),
         })),
     },
     {

@@ -41,13 +41,14 @@
     "footer": {
         "links": "Links",
         "rooms": "Rooms",
+        "services": "Services",
         "news": "News",
-        "rights": "All rights reserved"
+        "rights": "Hillside Guest House. All rights reserved."
     },
     "rooms": {
         "deluxe": {
             "name": "Deluxe",
-            "fullName": "Double Room DELUX",
+            "fullName": "Double Room DELUXE",
             "description": "Ideal for those seeking maximum comfort and exclusivity during their stay"
         },
         "standard": {
@@ -66,12 +67,69 @@
             "description": "Designed for guests who want to enjoy a spacious and stylish room with an enhanced level of service"
         }
     },
-    "news": {},
+    "news": {
+        "coop": {
+            "name": "Fresh egg breakfasts",
+            "description": "Delicious Breakfast at Hillside Guest house: fresh eggs dishes",
+            "author": "Khachatur Martirosyan",
+            "texts": [
+                "An egg eaten in the morning saturates the human body with a supply of protein and essential amino acids for the whole day. There are more than two dozen recipes for cooking eggs. In addition, this natural product is easily digested and creates a feeling of satiety.",
+                "Our menu can offer you eggs Benedict, omelet, scrambled eggs, boiled eggs, scrambled eggs with basturma, scrambled eggs with tomatoes, etc.",
+                "We offer super fresh product straight from the roost! So how do we go about doing this? Easily. Our guesthouse has its own chicken farm.",
+                "Did you have breakfast? Well. Let's take a walk around the beautiful ancient city of Yerevan!"
+            ]
+        },
+        "mir": {
+            "name": "Mir payment system",
+            "description": "What currency do you need for travel in Armenia?",
+            "author": "Khachatur Martirosyan",
+            "texts": [
+                "For a trip to Armenia, you can take with you any desired currency. You can easily exchange dollars, euros and rubles for drams at any bank branch or exchange office. You can always find them nearby.",
+                "What about credit cards? Most stores accept popular payment systems like MasterCard, Visa, and Maestro. Albeit, there are some difficulties with the Russian payment system MIR according to Swift-related sanctions. However, it is not always possible to withdraw money from credit cards. Therefore, it would be a good idea to bring cash with you to Armenia. This is the best option.",
+                "Hillside Guest House accepts payment for the room in any way convenient for the guest."
+            ]
+        },
+        "discount": {
+            "name": "Discounts",
+            "description": "Attention! Winter is a perfect time for sales and bonuses!",
+            "author": "Khachatur Martirosyan",
+            "texts": [
+                "From November 1, 2022 to February 28, 2023 our guesthouse Hillside offers significant discounts on accommodation rooms. During this period, you can book a room for 15% cheaper from the original price. Discount on accommodation in the center of Yerevan is great news for travelers!"
+            ]
+        }
+    },
+    "services": {
+        "transfer": {
+            "name": "Transfer",
+            "fullName": "Airport transfer",
+            "texts": []
+        },
+        "car-rental": {
+            "name": "Car rental",
+            "fullName": "Car rental",
+            "texts": []
+        },
+        "tours": {
+            "name": "Tours",
+            "fullName": "Tours across Armenia",
+            "texts": []
+        }
+    },
     "contact": {
         "phone": "Phone",
         "email": "Email",
-        "time": "Open time",
+        "time": "Opening hours",
         "address": "Address",
         "addressText": "Gevorg Jahukyan street 3/7, Yerevan, Armenia"
+    },
+    "banner": {
+        "title": "Contact us now!",
+        "description": "Contact to book directly or for advice"
+    },
+    "newsletter": {
+        "title": "Newsletter",
+        "description": "Subscribe to our newsletter to get notifications about new updates.",
+        "placeholder": "Enter your email...",
+        "button": "Subscribe"
     }
 }

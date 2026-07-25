@@ -1,10 +1,12 @@
-import type { NavigationMenuItem } from '@nuxt/ui';
+import type { NavigationMenuItem, BreadcrumbItem } from '@nuxt/ui';
 
 export const useNavigation = () => {
     const { t } = useI18n();
+    const { locale } = useI18n();
     const localePath = useLocalePath();
+    const route = useRoute();
 
-    const items = computed<NavigationMenuItem[]>(() => [
+    const links = computed<NavigationMenuItem[]>(() => [
         { label: t('navigation.about'), to: localePath('/about') },
         { label: t('navigation.rooms'), to: localePath('/rooms') },
         { label: t('navigation.services'), to: localePath('/services') },
@@ -13,5 +15,34 @@ export const useNavigation = () => {
         { label: t('navigation.book'), to: localePath('/book') },
     ]);
 
-    return { items };
+    const pageName = computed(() => String(route.name).split('___')[0]);
+
+    const breadcrumbs = computed<BreadcrumbItem[]>(() => {
+        const segments = route.path
+            .split('/')
+            .filter((s) => s && s !== locale.value);
+
+        const items: BreadcrumbItem[] = [
+            { label: t('navigation.home'), to: localePath('/') },
+        ];
+
+        let accumulated = '';
+        segments.forEach((segment, index) => {
+            accumulated += `/${segment}`;
+
+            const translationKey =
+                index > 0
+                    ? `${segments[index - 1]}.${segment}.name`
+                    : `navigation.${segment}`;
+
+            items.push({
+                label: t(translationKey),
+                to: accumulated,
+            });
+        });
+
+        return items;
+    });
+
+    return { links, pageName, breadcrumbs };
 };

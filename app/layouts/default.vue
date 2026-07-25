@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import * as allLocales from '@nuxt/ui/locale';
-
+import { en, ru, hy } from '@nuxt/ui/locale';
+const myLocales = { en, ru, hy };
 const { locale } = useI18n();
 </script>
 
 <template>
-    <UApp :locale="allLocales[locale]">
+    <UApp :locale="myLocales[locale]">
         <Header />
         <UMain>
             <slot />

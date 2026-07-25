@@ -3,10 +3,12 @@ const { t } = useI18n();
 useSeoMeta({
     title: t('seo.services.title'),
 });
+
+const { services } = useServices();
 </script>
 
 <template>
     <UContainer>
-        <h1>{{ $t('navigation.services') }}</h1>
+        <pre>{{ services }}</pre>
     </UContainer>
 </template>

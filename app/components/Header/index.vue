@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { items } = useNavigation();
+const { links } = useNavigation();
 </script>
 
 <template>
@@ -9,7 +9,7 @@ const { items } = useNavigation();
             <LogoText />
         </template>
         <UNavigationMenu
-            :items="items"
+            :items="links"
             variant="link"
             :ui="{
                 link: 'px-1 xl:px-2.5',
@@ -21,7 +21,7 @@ const { items } = useNavigation();
         </template>
         <template #body>
             <UNavigationMenu
-                :items="items"
+                :items="links"
                 variant="link"
                 orientation="vertical"
             />

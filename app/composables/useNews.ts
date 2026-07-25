@@ -3,71 +3,48 @@ export interface News {
     slug: string;
     name: string;
     description: string;
-    price: number;
-    size: number;
+    date: string;
+    author: string;
+    image_path: string;
     images: string[];
-    amenities: string[];
+    texts: string[];
 }
 
 export const useNews = () => {
-    const { t } = useI18n();
+    const { t, tm, rt } = useI18n();
+    let id = 0;
+
+    const makeNews = (
+        params: Omit<
+            News,
+            'id' | 'name' | 'description' | 'author' | 'texts' | 'image_path'
+        >,
+    ): News => ({
+        ...params,
+        id: ++id,
+        name: t(`news.${params.slug}.name`),
+        description: t(`news.${params.slug}.description`),
+        author: t(`news.${params.slug}.author`),
+        texts: (tm(`news.${params.slug}.texts`) as unknown[]).map(rt),
+        image_path: `/images/news/${params.slug}`,
+    });
+
     const news = computed<News[]>(() => [
-        {
-            id: 1,
-            slug: 'deluxe',
-            name: t('rooms.deluxe.name'),
-            description: t('rooms.deluxe.description'),
-            price: 80,
-            size: 35,
-            images: [
-                '/rooms/deluxe/main.jpg',
-                '/rooms/deluxe/bathroom.jpg',
-                '/rooms/deluxe/view.jpg',
-            ],
-            amenities: ['wifi', 'ac', 'minibar', 'balcony'],
-        },
-        {
-            id: 2,
-            slug: 'standard',
-            name: t('rooms.standard.name'),
-            description: t('rooms.standard.description'),
-            price: 80,
-            size: 35,
-            images: [
-                '/rooms/deluxe/main.jpg',
-                '/rooms/deluxe/bathroom.jpg',
-                '/rooms/deluxe/view.jpg',
-            ],
-            amenities: ['wifi', 'ac', 'minibar', 'balcony'],
-        },
-        {
-            id: 3,
-            slug: 'comfort',
-            name: t('rooms.comfort.name'),
-            description: t('rooms.comfort.description'),
-            price: 80,
-            size: 35,
-            images: [
-                '/rooms/deluxe/main.jpg',
-                '/rooms/deluxe/bathroom.jpg',
-                '/rooms/deluxe/view.jpg',
-            ],
-            amenities: ['wifi', 'ac', 'minibar', 'balcony'],
-        },
-        {
-            id: 4,
-            slug: 'superior',
-            name: t('rooms.superior.name'),
-            description: t('rooms.superior.description'),
-            price: 80,
-            size: 35,
-            images: [
-                '/rooms/deluxe/main.jpg',
-                '/rooms/deluxe/bathroom.jpg',
-                '/rooms/deluxe/view.jpg',
-            ],
-            amenities: ['wifi', 'ac', 'minibar', 'balcony'],
-        },
+        makeNews({
+            slug: 'coop',
+            date: '2025.02.21',
+            images: ['coop.jpg'],
+        }),
+        makeNews({
+            slug: 'mir',
+            date: '2025.09.21',
+            images: ['mir.png'],
+        }),
+        makeNews({
+            slug: 'discount',
+            date: '2025.11.01',
+            images: ['discount.jpg'],
+        }),
     ]);
     return { news };
 };
